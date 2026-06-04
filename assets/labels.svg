@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 134" role="img" aria-label="Lane and Type labels">
+  <style>
+    .chip { font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 13px; font-weight: 600; fill: #fff; }
+    .gut  { font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; font-weight: 700; fill: #888; }
+  </style>
+
+  <!-- Lane row -->
+  <text class="gut" x="8" y="44">LANE</text>
+  <g>
+    <rect x="70"  y="24" width="92"  height="30" rx="6" fill="#DC2626"/><text class="chip" x="116" y="44" text-anchor="middle">Lane Now</text>
+    <rect x="174" y="24" width="108" height="30" rx="6" fill="#2563EB"/><text class="chip" x="228" y="44" text-anchor="middle">Lane Ready</text>
+    <rect x="294" y="24" width="140" height="30" rx="6" fill="#7C3AED"/><text class="chip" x="364" y="44" text-anchor="middle">Lane Discovery</text>
+    <rect x="446" y="24" width="108" height="30" rx="6" fill="#6B7280"/><text class="chip" x="500" y="44" text-anchor="middle">Lane Later</text>
+  </g>
+
+  <!-- Type row -->
+  <text class="gut" x="8" y="104">TYPE</text>
+  <g>
+    <rect x="70"  y="84" width="92"  height="30" rx="6" fill="#DC2626"/><text class="chip" x="116" y="104" text-anchor="middle">Type Bug</text>
+    <rect x="174" y="84" width="124" height="30" rx="6" fill="#2563EB"/><text class="chip" x="236" y="104" text-anchor="middle">Type Feature</text>
+    <rect x="310" y="84" width="140" height="30" rx="6" fill="#7C3AED"/><text class="chip" x="380" y="104" text-anchor="middle">Type Discovery</text>
+    <rect x="462" y="84" width="140" height="30" rx="6" fill="#D97706"/><text class="chip" x="532" y="104" text-anchor="middle">Type Follow-up</text>
+    <rect x="614" y="84" width="140" height="30" rx="6" fill="#6B7280"/><text class="chip" x="684" y="104" text-anchor="middle">Type Tech Debt</text>
+  </g>
+</svg>

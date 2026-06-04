@@ -1,3 +1,5 @@
+<img src="../../assets/ghost-mark.svg" alt="GhostFactory" width="56" align="right">
+
 # Product-Dev Skills
 
 General, workflow-neutral skills for AI-assisted product development. They are not tied to any specific issue tracker or classification model — they work standalone and can be combined with the [Linear workflow](../../linear-workflow/) skills.

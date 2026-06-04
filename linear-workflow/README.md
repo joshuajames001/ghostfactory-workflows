@@ -1,3 +1,5 @@
+<img src="../assets/ghost-mark.svg" alt="GhostFactory" width="56" align="right">
+
 # Linear AI-First Workflow
 
 Using Linear as a **control plane** when Claude (or another agent) creates most of your issues — not humans.
@@ -55,6 +57,8 @@ Human decides on active work.
 ---
 
 ## Key rules
+
+<img src="../assets/labels.svg" alt="Lane and Type labels" width="640">
 
 **Lane system** — every issue has exactly one lane:
 
