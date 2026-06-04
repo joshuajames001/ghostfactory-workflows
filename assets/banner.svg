@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 300" role="img" aria-label="GhostFactory Workflows — agents rule tomorrow">
+  <rect width="1040" height="300" fill="#0e0e10"/>
+  <rect x="0" y="294" width="1040" height="6" fill="#ff4535"/>
+
+  <!-- Ghost Mark (real brand mark, recolored for dark bg) -->
+  <g transform="translate(-107.5,-92.5) scale(2.5)">
+    <path d="M75,116 L75,90 A25,25 0 0,1 125,90 L125,116 Q116,128 108,116 Q100,128 91,116 Q83,128 75,116 Z" fill="#ff4535"/>
+    <circle cx="90" cy="80" r="5" fill="#0e0e10"/>
+    <circle cx="110" cy="80" r="5" fill="#0e0e10"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="250" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="58" font-weight="800" fill="#ffffff" letter-spacing="-1">GhostFactory <tspan fill="#ff4535">Workflows</tspan></text>
+  <rect x="252" y="150" width="120" height="5" fill="#ff4535"/>
+
+  <!-- Subtitle -->
+  <text x="252" y="195" font-family="'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace" font-size="23" fill="#9aa0a6">Linear · AI-first issue workflow</text>
+
+  <!-- Tagline -->
+  <text x="252" y="234" font-family="'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#5a5f66" letter-spacing="4">AGENTS RULE TOMORROW</text>
+</svg>

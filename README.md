@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="GhostFactory Workflows — agents rule tomorrow" width="820">
+</p>
+
 # GhostFactory Workflows
 
 Workflows, issue models and reusable AI skills for **AI-first product development** — where issues are created by agents (Claude, Linear Agent, …), not humans.
@@ -38,6 +42,20 @@ Every issue carries exactly **one Lane** (when/how) and **one Type** (what kind 
 **Critical rule:** if an issue has an open question or needs a decision before implementation → `Type Discovery`, even if it looks like Tech Debt.
 
 **Triage = checkpoint, not a trigger.** AI-generated `Lane Ready` and `Lane Discovery` issues go through Triage as a second check before backlog. `Lane Later` may go straight to backlog. `Lane Now` is never set by an agent.
+
+```mermaid
+flowchart LR
+    T["Template"] --> A["Agent classifies<br/>1 Lane · 1 Type"]
+    A -->|"Lane Ready / Discovery"| TR{{"Triage<br/>checkpoint"}}
+    A -->|"Lane Later"| B["Backlog"]
+    TR --> B
+    B --> C["Cycle"]
+    H(["Human"]) -. "Lane Now (only)" .-> C
+    classDef accent fill:#ff4535,stroke:#111,color:#fff;
+    classDef human fill:#111,stroke:#ff4535,color:#fff;
+    class TR accent;
+    class H human;
+```
 
 ---
 
