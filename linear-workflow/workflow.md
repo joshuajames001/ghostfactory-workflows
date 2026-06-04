@@ -445,7 +445,7 @@ Clean up a few representative projects to create a reference model.
 
 E.g.:
 
-- Span Chain / Observability Core
+- Observability Core
 - RAG GF AOS
 - GhostFactory AOS 3.0
 

@@ -36,7 +36,7 @@ Run on create / update / import. Remove: `triage:now/ready/discovery/later`, the
 - **Common:** `Frontend`, `Backend`, `infra`, `Security`, `Testing`, `sdk`
 - **Project-specific:** `<DOMAIN_LABEL>`
 
-> Example (GhostFactory) — Span Chain: `ledger`, `otel`, `evals`, `runtime`, `observability`, `liveview`, `scale`, `versioning`
+> Example (GhostFactory) — observability project: `ledger`, `otel`, `evals`, `runtime`, `observability`, `liveview`, `scale`, `versioning`
 
 Constraints: max 3; a domain label does not replace a type or a lane.
 

@@ -70,7 +70,7 @@ Use project and domain context conservatively. Map by keyword → `<PROJECT>`:
 - `<DOMAIN_LABEL>`, … → `<PROJECT_C>`
 
 > Example (GhostFactory):
-> - replay, evals, traces, ledger, OTLP, observability, liveview → Span Chain / Observability Core
+> - replay, evals, traces, ledger, OTLP, observability, liveview → Observability Core
 > - RAG, embeddings, retrieval, reranking, GitHub + Linear context → RAG GF AOS
 > - agent orchestration, control plane, execution plane, HITL, Ghost Channel → GhostFactory AOS 3.0
 

@@ -95,7 +95,7 @@ Files ending in `.template.md` contain placeholders plus an `> Example (GhostFac
 
 ## Context
 
-Built during development of [Span Chain](https://spanchain.dev) — a tamper-evident observability framework for AI agents. Part of the [GhostFactory .ART](https://ghostfactory.art) ecosystem.
+Built and used in production as part of the [GhostFactory .ART](https://ghostfactory.art) ecosystem for building and operating AI agents.
 
 > Agents Rule Tomorrow.
 

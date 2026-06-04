@@ -41,7 +41,7 @@ Team-level, used only where they make sense.
 - **Common:** `Frontend`, `Backend`, `infra`, `Security`, `Testing`, `sdk`
 - **Project-specific:** `<DOMAIN_LABEL>` depending on the project
 
-> Example (GhostFactory) — Span Chain: `ledger`, `otel`, `evals`, `runtime`, `observability`, `liveview`, `scale`, `versioning`
+> Example (GhostFactory) — observability project: `ledger`, `otel`, `evals`, `runtime`, `observability`, `liveview`, `scale`, `versioning`
 
 Rules: a domain label is neither a lane nor a type; max 3 per issue.
 
