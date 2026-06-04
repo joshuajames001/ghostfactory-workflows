@@ -1,8 +1,8 @@
 # Linear Skills
 
-Reusable operational workflow modules for Claude (or another AI agent) working in Linear under the GF_AOS issue model.
+Reusable **skills** for your Linear agent, working under the GF_AOS issue model. Add each one in `settings/ai-agents` → agent personalization → **Skills** (the section below guidance); you can also use them with any other AI agent.
 
-Each skill = a single single-task instruction. They all assume:
+Each skill is a single, self-contained task. They all assume:
 - `Lane Now / Ready / Discovery / Later`
 - `Type Bug / Feature / Discovery / Follow-up / Tech Debt`
 - the ban on `triage:*` and the old `ready`

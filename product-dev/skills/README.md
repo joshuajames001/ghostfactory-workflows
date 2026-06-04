@@ -2,7 +2,7 @@
 
 General, workflow-neutral skills for AI-assisted product development. They are not tied to any specific issue tracker or classification model — they work standalone and can be combined with the [Linear workflow](../../linear-workflow/) skills.
 
-Each skill = a single single-task instruction.
+Each skill is a single, self-contained task. Add them to your Linear agent under `settings/ai-agents` → agent personalization → **Skills**, or use them with any other AI agent.
 
 ---
 

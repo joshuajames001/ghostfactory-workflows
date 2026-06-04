@@ -69,8 +69,8 @@ Pick the track that matches your goal.
 3. Create the `Lane *` and `Type *` labels in your workspace.
 4. Use [`linear-workflow/policy/`](linear-workflow/policy/) as your team's source of truth.
 
-### B. Use the AI skills
-Each skill in [`linear-workflow/skills/`](linear-workflow/skills/) is a single-task instruction for Claude (or any agent). Paste a skill's body as the agent prompt, then give it your raw input.
+### B. Add the AI skills to your Linear agent
+The files in [`linear-workflow/skills/`](linear-workflow/skills/) are agent **skills**, not throwaway prompts. Register each one in Linear under `settings/ai-agents` → agent personalization → **Skills** (the section below guidance). The agent then picks the right skill per task. You can also use any skill with another agent (e.g. Claude) by giving it the skill body.
 
 - Session review → `create-gf-issues`, `bug-report-from-notes`, `feature-request-to-backlog`, `issue-from-informal-input`
 - Backlog hygiene → `triage-issue`, `backlog-grooming`, `prioritize-backlog-item`

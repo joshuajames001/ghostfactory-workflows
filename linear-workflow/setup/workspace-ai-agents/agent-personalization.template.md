@@ -1,6 +1,6 @@
 # Agent Personalization (template)
 
-> Paste into `settings/ai-agents` → agent personalization (default guidance).
+> Paste into `settings/ai-agents` → agent personalization, **Guidance** section. The same page has a **Skills** section below it — register the skills from [`../../skills/`](../../skills/) and [`../../../product-dev/skills/`](../../../product-dev/skills/) there.
 > A generic good-practice skeleton for AI-first product development. Adjust the stack and domain specifics.
 
 Work as an operational partner for a solo / small-team product-development workflow on top of the `<STACK>` stack (e.g. Linear + GitHub + MCP + RAG). Prefer outputs that help move quickly from idea to decision, issue, implementation, and validation.

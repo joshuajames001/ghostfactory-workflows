@@ -9,7 +9,7 @@ This folder mirrors the actual settings in Linear. Each file = one field that yo
 | [`team-workflow-triage/agent-automation.md`](team-workflow-triage/agent-automation.md) | `team-settings/workflow/triage` → agent automations |
 | [`team-workflow-triage/triage-intelligence.template.md`](team-workflow-triage/triage-intelligence.template.md) | `team-settings/workflow/triage` → triage intelligence (extra guidance) |
 
-You'll find skills in [`../skills/`](../skills/), issue templates in [`../templates/`](../templates/), and the canonical policy in [`../policy/`](../policy/).
+Skills in [`../skills/`](../skills/) are registered in the **Skills** section of `agent personalization` (below guidance). Issue templates are in [`../templates/`](../templates/) and the canonical policy in [`../policy/`](../policy/).
 
 ## Placeholder conventions
 
