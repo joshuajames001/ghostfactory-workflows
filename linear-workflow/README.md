@@ -13,6 +13,14 @@ Built for solo founders and small teams where the backlog can otherwise grow fas
 - **[Linear AI-First Issue Workflow](workflow.md)**
   — Full guide: lane/type model, Triage as checkpoint, the hybrid model, priority rules and a step-by-step rollout.
 
+### Setup
+
+- **[Setup — how to configure this in Linear](setup/)** — copy-paste-ready guidance/automation texts mapped to each Linear settings section (workspace AI agents, team workflow/triage).
+
+### Policy
+
+- **[Policy](policy/)** — canonical source of truth the skills reference: Final Issue Policy, Automation Spec, Template Selection Rules.
+
 ### Skills
 
 Reusable single-task modules for Claude (or any AI agent) working in Linear.

@@ -13,6 +13,8 @@ Public workflows, issue models and reusable AI skills for **AI-first product dev
 Using Linear as a control plane when Claude (or another agent) creates most of your issues. Stops the endless backlog-growth cycle with a strict lane/type model and Triage as a checkpoint.
 
 - [Workflow guide](linear-workflow/workflow.md) — lane/type model, Triage, hybrid model, rollout
+- [Setup](linear-workflow/setup/) — copy-paste configs mapped to Linear settings (AI agents, team workflow/triage)
+- [Policy](linear-workflow/policy/) — canonical rules the skills reference
 - [7 Linear skills](linear-workflow/skills/) — issue creation, triage, backlog hygiene
 - [Issue templates](linear-workflow/templates/) — Bug · Feature · Discovery · Follow-up · Tech Debt
 
