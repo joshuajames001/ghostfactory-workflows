@@ -1,50 +1,50 @@
 # Linear Skills
 
-Reusable operační workflow moduly pro Claude (nebo jiného AI agenta) pracujícího v Linearu podle GF_AOS issue modelu.
+Reusable operational workflow modules for Claude (or another AI agent) working in Linear under the GF_AOS issue model.
 
-Každý skill = jedna single-task instrukce. Všechny počítají s:
+Each skill = a single single-task instruction. They all assume:
 - `Lane Now / Ready / Discovery / Later`
 - `Type Bug / Feature / Discovery / Follow-up / Tech Debt`
-- zákazem `triage:*` a starého `ready`
-- hybridním modelem: `Lane Ready` a `Lane Discovery` → Triage review, `Lane Later` → rovnou backlog
+- the ban on `triage:*` and the old `ready`
+- the hybrid model: `Lane Ready` and `Lane Discovery` → Triage review, `Lane Later` → straight to the backlog
 
-> Obecné (ne-Linear) skills — PRD rozpad, implementační spec, release notes, reporting — najdeš v [`../../product-dev/skills/`](../../product-dev/skills/).
+> General (non-Linear) skills — PRD breakdown, implementation spec, release notes, reporting — are in [`../../product-dev/skills/`](../../product-dev/skills/).
 
 ---
 
 ## Skills
 
-| Skill | Účel |
+| Skill | Purpose |
 |---|---|
-| [Create GF issues](create-gf-issues.md) | Vytváří nové issue rovnou podle policy, template rules a lane/type modelu |
-| [Triage issue](triage-issue.md) | Rychlé triage rozhodnutí — 1× lane, 1× type, další krok, priorita |
-| [Backlog grooming](backlog-grooming.md) | Ověří kvalitu a připravenost issue, odhalí missing info, rizika a závislosti |
-| [Prioritizace backlog itemu](prioritize-backlog-item.md) | Konzervativní priorita podle dopadu, urgence a rizika |
-| [Feature request do backlogu](feature-request-to-backlog.md) | Převede nápad do backlog issue, rozliší Feature vs Discovery |
-| [Bug report z poznámek](bug-report-from-notes.md) | Převede neformální poznámky do kvalitního Bug issue |
-| [Issue z neformálního zadání](issue-from-informal-input.md) | Převede kusé zadání do správně strukturovaného a zařazeného issue |
+| [Create GF issues](create-gf-issues.md) | Creates new issues directly according to policy, template rules, and the lane/type model |
+| [Triage issue](triage-issue.md) | Quick triage decision — 1× lane, 1× type, next step, priority |
+| [Backlog grooming](backlog-grooming.md) | Verifies issue quality and readiness, surfaces missing info, risks, and dependencies |
+| [Prioritize backlog item](prioritize-backlog-item.md) | Conservative priority based on impact, urgency, and risk |
+| [Feature request to backlog](feature-request-to-backlog.md) | Turns an idea into a backlog issue, distinguishing Feature vs Discovery |
+| [Bug report from notes](bug-report-from-notes.md) | Turns informal notes into a quality Bug issue |
+| [Issue from informal input](issue-from-informal-input.md) | Turns fragmentary input into a properly structured and classified issue |
 
 ---
 
-## Doporučené použití
+## Recommended use
 
-**Session review** → `Create GF issues`, `Bug report z poznámek`, `Feature request do backlogu`, `Issue z neformálního zadání`
+**Session review** → `Create GF issues`, `Bug report from notes`, `Feature request to backlog`, `Issue from informal input`
 
-**Backlog hygiene** → `Triage issue`, `Backlog grooming`, `Prioritizace backlog itemu`
+**Backlog hygiene** → `Triage issue`, `Backlog grooming`, `Prioritize backlog item`
 
 ---
 
-## Architektura workflow
+## Workflow architecture
 
 - **Linear** = control plane: intake, triage, backlog, planning, execution handoff
-- **Claude / agent** = operator: tvorba issue, prvotní klasifikace, převod poznámek do struktury
-- **Člověk** = finální rozhodnutí: `Lane Now`, cycle selection, priority override, Triage review u `Lane Ready` a `Lane Discovery`
+- **Claude / agent** = operator: issue creation, initial classification, turning notes into structure
+- **Human** = final decision: `Lane Now`, cycle selection, priority override, Triage review for `Lane Ready` and `Lane Discovery`
 
-Nejdůležitější vrstva je tvorba a třídění issue:
+The most important layer is issue creation and sorting:
 
-- **Templates** dávají strukturu
-- **Lane** říká, kdy a jak se má issue řešit
-- **Type** říká, o jaký typ práce jde
-- **Triage** je druhá kontrola pro issue s vyšším rozhodovacím rizikem
+- **Templates** provide structure
+- **Lane** says when and how the issue should be addressed
+- **Type** says what kind of work it is
+- **Triage** is a second check for issues with higher decision risk
 
-Model je přenositelný i do jiných AI-assisted týmů, kde issue často nevznikají ručně, ale přes agenty.
+The model is also portable to other AI-assisted teams, where issues are often created not by hand but through agents.

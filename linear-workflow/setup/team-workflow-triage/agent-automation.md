@@ -1,7 +1,7 @@
 # Agent Automation — Triage
 
-> Vlož do `team-settings/workflow/triage` → agent automations.
-> Generický text, žádné placeholdery.
+> Paste into `team-settings/workflow/triage` → agent automations.
+> Generic text, no placeholders.
 
 ## Trigger
 When any issue enters triage

@@ -1,36 +1,36 @@
 # Automation Spec (template)
 
-Jak se mají agent automations v týmu `<TEAM>` chovat při vytváření a úpravách issue.
+How agent automations in the `<TEAM>` team should behave when creating and editing issues.
 
-## Cíl
-Automations mají:
-- udržovat konzistentní klasifikaci
-- snižovat ruční backlog hygiene
-- připravovat issue pro planning a execution
-- nikdy nerozbíjet lane/type model
-- posílat vyšší-rizikové AI-generated issues do Triage jako explicitní review checkpoint
+## Goal
+Automations should:
+- keep classification consistent
+- reduce manual backlog hygiene
+- prepare issues for planning and execution
+- never break the lane/type model
+- send higher-risk AI-generated issues to Triage as an explicit review checkpoint
 
-Automations nemají: rozhodovat o aktivní práci místo člověka, vytvářet konfliktní klasifikaci, přepisovat správně zařazené issue bez důvodu.
+Automations should not: decide on active work in place of a human, create conflicting classification, or rewrite correctly classified issues without reason.
 
-## Povinný model
-Každé issue: 1× `Lane *`, 1× `Type *`, 0–3 domain labels, priorita.
-Zakázáno: `triage:*` jako hlavní model, starý `ready`.
+## Mandatory model
+Every issue: 1× `Lane *`, 1× `Type *`, 0–3 domain labels, priority.
+Forbidden: `triage:*` as the main model, the old `ready`.
 
 ## Automation 1 — On issue created by Claude / Linear Agent
-**Smí:** doplnit `Lane *`, `Type *`, konzervativně navrhnout prioritu, doplnit domain label, rozhodnout o Triage review.
-**Nesmí:** `Lane Now`, víc lane/type, `triage:*`, starý `ready`, přiřadit cycle, vytvářet follow-up.
-**Lane:** konkrétní → `Lane Ready` · nejasné/epik/rozhodnutí → `Lane Discovery` · odložené → `Lane Later` · `Lane Now` jen ručně.
-**Type:** dle Final Issue Policy; open questions/audit/rozhodnutí před implementací → `Type Discovery` i u cleanup/hardening.
-**Priority:** `Urgent` jen security/data loss/hard blocker · `High` release/delivery blocker · jinak konzervativně.
-**Routing:** `Lane Discovery` a `Lane Ready` → do Triage · `Lane Later` → rovnou backlog · `Lane Now` nikdy automaticky.
+**May:** add `Lane *`, `Type *`, conservatively propose priority, add a domain label, decide on Triage review.
+**Must not:** `Lane Now`, multiple lanes/types, `triage:*`, the old `ready`, assign a cycle, create follow-ups.
+**Lane:** concrete → `Lane Ready` · unclear/epic/decision → `Lane Discovery` · deferred → `Lane Later` · `Lane Now` manually only.
+**Type:** per the Final Issue Policy; open questions/audit/decision before implementation → `Type Discovery` even for cleanup/hardening.
+**Priority:** `Urgent` only for security/data loss/hard blocker · `High` for release/delivery blocker · otherwise conservative.
+**Routing:** `Lane Discovery` and `Lane Ready` → to Triage · `Lane Later` → straight to backlog · `Lane Now` never automatically.
 
 ## Automation 2 — On issue updated
-**Smí:** doplnit chybějící `Lane *`/`Type *`, odstranit zakázané labely, srovnat očividně nekonzistentní issue.
-**Nesmí:** přepisovat správný lane/type bez důvodu, eskalovat na `Lane Now`, zvyšovat prioritu bez pravidla.
-**Conflict resolution:** víc lane → ponechat konzervativnější (`Lane Discovery` > `Lane Later` > `Lane Ready`); víc type → ponechat nejlépe odpovídající. Při nejistotě `Lane Discovery`.
+**May:** add a missing `Lane *`/`Type *`, remove forbidden labels, align an obviously inconsistent issue.
+**Must not:** rewrite a correct lane/type without reason, escalate to `Lane Now`, raise priority without a rule.
+**Conflict resolution:** multiple lanes → keep the more conservative one (`Lane Discovery` > `Lane Later` > `Lane Ready`); multiple types → keep the best-fitting one. When in doubt, `Lane Discovery`.
 
 ## Automation 3 — Legacy cleanup guard
-Spustit při create / update / importu. Odstranit: `triage:now/ready/discovery/later`, starý `ready`. Ponechat: `Lane *`, `Type *`, domain labels.
+Run on create / update / import. Remove: `triage:now/ready/discovery/later`, the old `ready`. Keep: `Lane *`, `Type *`, domain labels.
 
 ## Domain labels
 - **Common:** `Frontend`, `Backend`, `infra`, `Security`, `Testing`, `sdk`
@@ -38,10 +38,10 @@ Spustit při create / update / importu. Odstranit: `triage:now/ready/discovery/l
 
 > Example (GhostFactory) — Span Chain: `ledger`, `otel`, `evals`, `runtime`, `observability`, `liveview`, `scale`, `versioning`
 
-Omezení: max 3; domain label nenahrazuje type ani lane.
+Constraints: max 3; a domain label does not replace a type or a lane.
 
 ## Human-only decisions
-`Lane Now` · cycle assignment · finální priority override · přijetí `Lane Ready`/`Lane Discovery` z Triage do backlogu · merge/zrušení issue.
+`Lane Now` · cycle assignment · final priority override · accepting `Lane Ready`/`Lane Discovery` from Triage into the backlog · merging/closing an issue.
 
 ## Expected output
-Po vytvoření issue: 1× `Lane *`, 1× `Type *`, žádný legacy label, konzistentní priorita, případně domain labels, správné rozhodnutí o Triage review.
+After an issue is created: 1× `Lane *`, 1× `Type *`, no legacy label, consistent priority, optionally domain labels, a correct decision about Triage review.

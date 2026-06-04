@@ -1,75 +1,75 @@
 # Final Issue Policy (template)
 
-Finální operativní policy pro tým `<TEAM>`. Kanonický zdroj pravdy pro klasifikaci issue — skills i automations se odkazují sem.
+Final operational policy for the `<TEAM>` team. The canonical source of truth for issue classification — both skills and automations refer back to this.
 
-## 1. Povinné klasifikační osy
-Každé nové issue má mít:
+## 1. Mandatory classification axes
+Every new issue should have:
 - **1× Lane**
 - **1× Type**
-- volitelně **0–3 domain labels**
+- optionally **0–3 domain labels**
 - priority
 
 ## 2. Lane labels
-Používat jen: `Lane Now`, `Lane Ready`, `Lane Discovery`, `Lane Later`
+Use only: `Lane Now`, `Lane Ready`, `Lane Discovery`, `Lane Later`
 
-### Pravidla
-- issue nesmí mít víc než jeden lane label
-- `Lane Now` se nenastavuje automaticky
-- při nejistotě: `Lane Discovery` (ne `Lane Ready`)
+### Rules
+- an issue must not have more than one lane label
+- `Lane Now` is never set automatically
+- when in doubt: `Lane Discovery` (not `Lane Ready`)
 
-### Význam
-- `Lane Now` — aktivně řešené teď
-- `Lane Ready` — konkrétní, implementovatelné, připravené pro planning; před backlogem projít Triage review
-- `Lane Discovery` — potřebuje rozhodnutí, validaci nebo rozpad; projít Triage
-- `Lane Later` — validní práce, ale ne teď; může rovnou do backlogu
+### Meaning
+- `Lane Now` — actively being worked on right now
+- `Lane Ready` — concrete, implementable, ready for planning; before going to the backlog, run through Triage review
+- `Lane Discovery` — needs a decision, validation, or breakdown; run through Triage
+- `Lane Later` — valid work, but not now; can go straight to the backlog
 
 ## 3. Type labels
-Používat jen: `Type Bug`, `Type Feature`, `Type Discovery`, `Type Follow-up`, `Type Tech Debt`
+Use only: `Type Bug`, `Type Feature`, `Type Discovery`, `Type Follow-up`, `Type Tech Debt`
 
-### Pravidla
-- issue nesmí být bez type ani mít víc než jeden type
+### Rules
+- an issue must not be without a type, nor have more than one type
 
-### Význam
-- `Type Bug` — chyba, regression, nesprávné chování
-- `Type Feature` — nová schopnost nebo dodávka hodnoty
-- `Type Discovery` — cílem je rozhodnutí, ne implementace
-- `Type Follow-up` — navazuje na hotovou práci, review nebo předchozí issue
+### Meaning
+- `Type Bug` — bug, regression, incorrect behavior
+- `Type Feature` — new capability or value delivery
+- `Type Discovery` — the goal is a decision, not implementation
+- `Type Follow-up` — follows up on completed work, a review, or a previous issue
 - `Type Tech Debt` — refactor, cleanup, infra hardening, maintainability
 
 ## 4. Domain labels
-Team-level, použité jen kde dávají smysl.
+Team-level, used only where they make sense.
 - **Common:** `Frontend`, `Backend`, `infra`, `Security`, `Testing`, `sdk`
-- **Project-specific:** `<DOMAIN_LABEL>` dle projektu
+- **Project-specific:** `<DOMAIN_LABEL>` depending on the project
 
 > Example (GhostFactory) — Span Chain: `ledger`, `otel`, `evals`, `runtime`, `observability`, `liveview`, `scale`, `versioning`
 
-Pravidla: domain label není lane ani type; max 3 na issue.
+Rules: a domain label is neither a lane nor a type; max 3 per issue.
 
 ## 5. Priority policy
 `Urgent` / `High` / `Medium` / `Low` / `No priority`
-- agent může priority **navrhovat**
-- automaticky nastavovat jen u jasných případů: security, data loss, hard blocker
-- `Lane Now` a cycle vybírá člověk
-- `Lane Ready` / `Lane Discovery` projdou Triage review → priorita se opraví dřív, než issue zapadne
+- the agent may **propose** priority
+- set it automatically only for clear cases: security, data loss, hard blocker
+- `Lane Now` and cycle are chosen by a human
+- `Lane Ready` / `Lane Discovery` go through Triage review → priority gets corrected before the issue falls through the cracks
 
-## 6. Zakázané věci
-- `triage:*` jako klasifikační model místo `Lane *`
-- starý `ready` jako workflow label
-- issue bez lane / bez type
-- víc lane nebo víc type labelů najednou
+## 6. Forbidden things
+- `triage:*` as a classification model instead of `Lane *`
+- the old `ready` as a workflow label
+- an issue without a lane / without a type
+- multiple lanes or multiple types at once
 
-## 7. Default behavior pro triage
-**Lane:** konkrétní → `Lane Ready` · nejasné → `Lane Discovery` · validní odložené → `Lane Later`
-**Type:** bug → `Type Bug` · nový build/delivery → `Type Feature` · arch/epic/průzkum → `Type Discovery` · navazující → `Type Follow-up` · refactor/cleanup → `Type Tech Debt`
-**Routing:** `Lane Discovery` a `Lane Ready` → do Triage · `Lane Later` → rovnou backlog · `Lane Now` → jen ručně
+## 7. Default behavior for triage
+**Lane:** concrete → `Lane Ready` · unclear → `Lane Discovery` · valid but deferred → `Lane Later`
+**Type:** bug → `Type Bug` · new build/delivery → `Type Feature` · arch/epic/research → `Type Discovery` · follow-up → `Type Follow-up` · refactor/cleanup → `Type Tech Debt`
+**Routing:** `Lane Discovery` and `Lane Ready` → to Triage · `Lane Later` → straight to backlog · `Lane Now` → manually only
 
 ## 8. Agent-generated issues
-Issue od Claude / agenta = AI-generated intake:
-- `Lane Ready` a `Lane Discovery` nejsou finálně schválené jen proto, že je agent nastavil
-- Triage je explicitní review checkpoint před vstupem do backlogu (druhá kontrola routingu, typu i priority)
+An issue from Claude / an agent = AI-generated intake:
+- `Lane Ready` and `Lane Discovery` are not finally approved just because an agent set them
+- Triage is an explicit review checkpoint before entering the backlog (a second check of routing, type, and priority)
 
-## 9. Hybrid model (praktický krok)
-- templates = strukturovaný vstup
-- agent = první klasifikace
-- triage = review checkpoint pro `Lane Ready` a `Lane Discovery`
-- backlog = až po přijetí v Triage, nebo rovnou jen pro `Lane Later`
+## 9. Hybrid model (practical step)
+- templates = structured input
+- agent = first classification
+- triage = review checkpoint for `Lane Ready` and `Lane Discovery`
+- backlog = only after acceptance in Triage, or straight away for `Lane Later` only

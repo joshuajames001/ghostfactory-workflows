@@ -11,13 +11,13 @@ Use this template when:
 
 ---
 
-## Problém
+## Problem
 
-## Řešení
+## Solution
 
 ## Done When
 - [ ]
 - [ ]
 - [ ]
 
-## Poznámka
+## Note

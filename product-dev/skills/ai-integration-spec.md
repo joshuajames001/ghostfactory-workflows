@@ -1,36 +1,36 @@
 ---
-name: Technické zadání pro AI nebo integraci
-description: Převede business požadavek do technického zadání pro AI integraci nebo automatizaci
+name: Technical spec for AI or integration
+description: Converts a business requirement into a technical spec for an AI integration or automation
 scope: product-dev
 ---
 
-Vytvoř technicky srozumitelné zadání pro AI funkci, integraci nebo automatizaci.
+Create a technically understandable spec for an AI feature, integration, or automation.
 
-## Cíl
-Převést požadavek do zadání použitelného pro refinement nebo handoff do vývoje.
+## Goal
+Convert a requirement into a spec usable for refinement or handoff to development.
 
-## Vstup
-Business požadavek, návrh procesu, technický nápad nebo integrační scénář.
+## Input
+A business requirement, a process proposal, a technical idea, or an integration scenario.
 
-## Postup
-1. Popiš kontext a řešený use case.
-2. Ujasni cílový efekt.
-3. Vypiš vstupy, události a zapojené systémy.
-4. Popiš očekávané chování krok za krokem.
-5. Doplň omezení, scope, metriky úspěchu a otevřené otázky.
+## Procedure
+1. Describe the context and the use case being solved.
+2. Clarify the target effect.
+3. List the inputs, events, and systems involved.
+4. Describe the expected behavior step by step.
+5. Add constraints, scope, success metrics, and open questions.
 
-## Výstup
-Použij strukturu:
-### Kontext
-### Cíl
-### Vstupy
-### Očekávané chování
-### Omezení
+## Output
+Use this structure:
+### Context
+### Goal
+### Inputs
+### Expected behavior
+### Constraints
 ### Scope
-### Metriky úspěchu
-### Otevřené otázky
+### Success metrics
+### Open questions
 
-## Pravidla
-- Rozlišuj business cíl a technickou implementaci.
-- Pokud chybí detail, navrhni rozumný default a označ ho.
-- Piš tak, aby zadání šlo použít pro refinement nebo handoff do vývoje.
+## Rules
+- Distinguish the business goal from the technical implementation.
+- If a detail is missing, propose a reasonable default and flag it.
+- Write so the spec can be used for refinement or handoff to development.

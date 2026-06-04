@@ -1,112 +1,112 @@
 # Linear for AI-First Issue Workflows
 
-Praktický tutorial pro solo founder / AI-first product-development workflow nad Linearem, kde issue často vytváří Claude nebo jiný agent.
+A practical tutorial for a solo-founder / AI-first product-development workflow on top of Linear, where issues are often created by Claude or another agent.
 
 ---
 
-## Problém, který řešíme
+## The problem we're solving
 
-Typický problém v AI-assisted workflow:
+A typical problem in an AI-assisted workflow:
 
-- proběhne session review
-- z review vzniknou nové issue
-- v dalším sprintu se řeší tyto issue
-- při řešení vzniknou další issue
-- backlog bobtná a člověk má pocit, že se točí na místě
+- a session review takes place
+- the review produces new issues
+- in the next sprint those issues get worked on
+- working on them produces yet more issues
+- the backlog swells and you feel like you're running in place
 
-Další komplikace:
+Further complications:
 
-- issue často nevznikají ručně v Linearu, ale přes externího agenta (např. Claude)
-- pokud issue nejdou přes Triage, team Triage automations se nespustí
-- pokud není sjednocené schema labels / lane / type, agenti rychle vyrábějí nekonzistentní backlog
+- issues often aren't created manually in Linear, but via an external agent (e.g. Claude)
+- if issues don't go through Triage, the team's Triage automations don't fire
+- if there's no unified schema for labels / lane / type, agents quickly produce an inconsistent backlog
 
-Cíl je udělat z Linearu **control plane**, ne jen místo, kam padají tasky.
-
----
-
-## Hlavní princip
-
-Linear má být:
-
-- source of truth pro planning
-- source of truth pro triage
-- source of truth pro backlog hygiene
-- source of truth pro execution handoff
-
-Agenti nejsou source of truth.
-Agenti mají:
-
-- pomáhat se strukturou
-- pomáhat s klasifikací
-- pomáhat s vytvářením issue
-- ale ne určovat aktivní práci bez review
+The goal is to make Linear a **control plane**, not just a place where tasks land.
 
 ---
 
-## Důležité zjištění: Triage není univerzální spouštěč
+## The core principle
 
-V Linearu se Triage nespouští periodicky.
-Triage funguje **událostně** — když issue **vstoupí do Triage**.
+Linear should be:
 
-To znamená:
+- the source of truth for planning
+- the source of truth for triage
+- the source of truth for backlog hygiene
+- the source of truth for execution handoff
 
-- issue vytvořená integrací nebo mimo team může skončit v Triage
-- issue vytvořená přímo jako normální team issue do backlogu nemusí do Triage vůbec jít
+Agents are not the source of truth.
+Agents should:
 
-Praktický důsledek:
+- help with structure
+- help with classification
+- help with creating issues
+- but not determine active work without review
 
-Pokud issue vytváří Claude mimo Linear Agent chat a nevkládá je do Triage, pak se nespustí:
+---
+
+## Important finding: Triage is not a universal trigger
+
+In Linear, Triage doesn't run periodically.
+Triage works **event-driven** — when an issue **enters Triage**.
+
+This means:
+
+- an issue created by an integration or from outside the team may end up in Triage
+- an issue created directly as a normal team issue into the backlog may not go through Triage at all
+
+The practical consequence:
+
+If Claude creates issues outside the Linear Agent chat and doesn't put them into Triage, then the following don't fire:
 
 - Triage Intelligence
 - Triage Rules
-- Agent Automations navázané na „when issue enters triage“
+- Agent Automations tied to "when issue enters triage"
 
-Proto je nutné mít dvojí model:
+That's why you need a dual model:
 
-1. **Claude-created issues** musí být vytvořená už rovnou správně
-2. **Triage** slouží jako review checkpoint pro případy, které do něj skutečně vstoupí nebo které tam vědomě pošleš
+1. **Claude-created issues** must be created correctly from the start
+2. **Triage** serves as a review checkpoint for cases that actually enter it or that you deliberately send there
 
 ---
 
-## Finální issue schema pro tým GF_AOS
+## Final issue schema for the GF_AOS team
 
-Každé issue má mít:
+Every issue should have:
 
-- přesně **1 Lane**
-- přesně **1 Type**
-- volitelné domain labels
-- prioritu
+- exactly **1 Lane**
+- exactly **1 Type**
+- optional domain labels
+- a priority
 
 ### Lane labels
 
-Používat jen:
+Use only:
 
 - `Lane Now`
 - `Lane Ready`
 - `Lane Discovery`
 - `Lane Later`
 
-### Význam lane
+### Lane meaning
 
 - `Lane Now`
-  - aktivně řešené teď
-  - jen ruční rozhodnutí člověka
+  - actively being worked on right now
+  - human manual decision only
 
 - `Lane Ready`
-  - konkrétní, implementovatelné, připravené pro planning
-  - u AI-generated issue má jít přes review checkpoint
+  - concrete, implementable, ready for planning
+  - for an AI-generated issue, should go through a review checkpoint
 
 - `Lane Discovery`
-  - je potřeba rozhodnutí, validace nebo rozpad scope
-  - má jít přes review checkpoint
+  - a decision, validation, or scope breakdown is needed
+  - should go through a review checkpoint
 
 - `Lane Later`
-  - validní práce, ale ne teď
-  - může jít rovnou do backlogu
+  - valid work, but not now
+  - can go straight to the backlog
 
 ### Type labels
 
-Používat jen:
+Use only:
 
 - `Type Bug`
 - `Type Feature`
@@ -114,113 +114,113 @@ Používat jen:
 - `Type Follow-up`
 - `Type Tech Debt`
 
-### Význam type
+### Type meaning
 
 - `Type Bug`
   - broken behavior, regression, wrong behavior
 
 - `Type Feature`
-  - nová schopnost nebo delivery item
+  - new capability or delivery item
 
 - `Type Discovery`
-  - průzkum, epic, audit, arch rozhodnutí, otevřená otázka
+  - research, epic, audit, architecture decision, open question
 
 - `Type Follow-up`
-  - navazující práce po review nebo po hotovém issue
+  - follow-up work after a review or after a completed issue
 
 - `Type Tech Debt`
   - refactor, cleanup, infra hardening, maintainability
 
-### Zakázané labely
+### Forbidden labels
 
-Nepoužívat jako workflow model:
+Do not use as a workflow model:
 
 - `triage:*`
-- starý `ready`
+- the old `ready`
 
 ---
 
-## Klíčové pravidlo, které se ukázalo jako důležité
+## A key rule that proved important
 
-Pokud issue obsahuje:
+If an issue contains:
 
-- otevřené otázky
-- audit
-- nutné rozhodnutí před implementací
+- open questions
+- an audit
+- a decision required before implementation
 
-pak má být:
+then it should be:
 
 - `Type Discovery`
 
-**i když technicky souvisí s cleanupem nebo hardeningem**.
+**even if it technically relates to cleanup or hardening**.
 
-Tohle je důležité, protože bez tohoto pravidla mají agenti tendenci cpát „decision-first“ issue do `Type Tech Debt`.
-
----
-
-## Hybridní model pro AI-generated issues
-
-Ne všechno musí přes Triage, jinak vzniká zbytečný overhead.
-
-### Doporučený model
-
-- `Lane Discovery` → pošli do **Triage**
-- `Lane Ready` → pošli do **Triage**
-- `Lane Later` → může jít rovnou do **backlogu**
-- `Lane Now` → agent nikdy nenastavuje
-
-### Proč to dává smysl
-
-`Lane Ready` a `Lane Discovery` jsou issue, která mají dopad na blízkou práci nebo vyžadují rozhodnutí.
-Tady chceš explicitní checkpoint.
-
-`Lane Later` jsou low-risk backlog items, kde review moment není tak důležitý.
+This is important because without this rule agents tend to cram "decision-first" issues into `Type Tech Debt`.
 
 ---
 
-## Co z toho plyne pro Claude-created issues
+## Hybrid model for AI-generated issues
 
-Protože issue budou často vytvářet externí agenti a ne Linear Agent v Triage flow, musí být Claude naučen:
+Not everything has to go through Triage, otherwise you create unnecessary overhead.
 
-- vybrat správný template
-- napsat issue ve správné struktuře
-- nastavit správný lane
-- nastavit správný type
-- být konzervativní s prioritou
+### Recommended model
 
-Nesmíš spoléhat, že to za něj „někde potom opraví Triage“.
+- `Lane Discovery` → send to **Triage**
+- `Lane Ready` → send to **Triage**
+- `Lane Later` → may go straight to the **backlog**
+- `Lane Now` → the agent never sets this
 
----
+### Why this makes sense
 
-## Templates nejsou náhrada za triage
+`Lane Ready` and `Lane Discovery` are issues that affect near-term work or require a decision.
+This is where you want an explicit checkpoint.
 
-Templates slouží jako **structured intake**.
-To znamená:
-
-- zvyšují kvalitu vstupu
-- zlepšují rozhodování agenta i triage
-- drží konzistenci popisu issue
-
-Templates samy o sobě nerozhodnou:
-
-- co je důležité
-- co má být `Lane Ready`
-- co je `Type Discovery`
-
-Ale výrazně tomu pomáhají.
+`Lane Later` are low-risk backlog items, where the review moment isn't as important.
 
 ---
 
-## Doporučené issue templates
+## What this means for Claude-created issues
+
+Because issues will often be created by external agents rather than by the Linear Agent in the Triage flow, Claude must be taught to:
+
+- pick the right template
+- write the issue in the right structure
+- set the right lane
+- set the right type
+- be conservative with priority
+
+You can't rely on "Triage fixing it later somewhere down the line".
+
+---
+
+## Templates are not a substitute for triage
+
+Templates serve as **structured intake**.
+That means they:
+
+- raise the quality of the input
+- improve the decision-making of both the agent and triage
+- keep issue descriptions consistent
+
+Templates by themselves don't decide:
+
+- what is important
+- what should be `Lane Ready`
+- what is `Type Discovery`
+
+But they help a lot with it.
+
+---
+
+## Recommended issue templates
 
 ### 1. Bug
-Použij, když:
+Use when:
 
-- něco je rozbité
-- jde o regression
-- existuje expected vs actual behavior
+- something is broken
+- it's a regression
+- there is expected vs actual behavior
 
-Struktura:
+Structure:
 
 ```md
 ## What happened
@@ -244,17 +244,17 @@ Struktura:
 ---
 
 ### 2. Feature
-Použij, když:
+Use when:
 
-- přidáváš novou schopnost
-- dodáváš nový screen, API, workflow nebo delivery item
+- you're adding a new capability
+- you're delivering a new screen, API, workflow, or delivery item
 
-Struktura:
+Structure:
 
 ```md
-## Kontext
+## Context
 
-## Cíl
+## Goal
 
 ## Scope
 - 
@@ -274,86 +274,86 @@ Struktura:
 ---
 
 ### 3. Discovery
-Použij, když:
+Use when:
 
-- cílem ještě není implementace
-- chybí rozhodnutí
-- jde o architekturu, audit, epic nebo otevřenou otázku
+- implementation is not yet the goal
+- a decision is missing
+- it's about architecture, an audit, an epic, or an open question
 
-Struktura:
+Structure:
 
 ```md
-## Kontext
+## Context
 
-## Problém / otázka
+## Problem / question
 
-## Možné směry
+## Possible directions
 - 
 - 
 - 
 
 ## Exit criteria
-- [ ] máme doporučené rozhodnutí
-- [ ] máme důvod proč
-- [ ] máme jasný next step
+- [ ] we have a recommended decision
+- [ ] we have the reason why
+- [ ] we have a clear next step
 
-## Zdroj / reference
+## Source / references
 ```
 
 ---
 
 ### 4. Follow-up
-Použij, když:
+Use when:
 
-- issue vzniká z review
-- navazuje na hotovou práci
-- explicitně chceš zachovat návaznost
+- the issue comes from a review
+- it follows up on completed work
+- you explicitly want to preserve continuity
 
-Struktura:
+Structure:
 
 ```md
 ## What
 
 ## Why
 
-## Řešení
+## Solution
 
 ## Acceptance criteria
 - [ ]
 - [ ]
 - [ ]
 
-## Kontext
+## Context
 ```
 
 ---
 
 ### 5. Tech Debt
-Použij, když:
+Use when:
 
-- jde o cleanup, refactor, hardening nebo maintainability
-- nejde primárně o novou schopnost
+- it's about cleanup, refactor, hardening, or maintainability
+- it's not primarily about a new capability
 
-Struktura:
+Structure:
 
 ```md
-## Problém
+## Problem
 
-## Řešení
+## Solution
 
 ## Done When
 - [ ]
 - [ ]
 - [ ]
 
-## Poznámka
+## Note
 ```
 
 ---
 
 ## Template selection rules
 
-Použij tento jednoduchý mapping:
+Use this simple mapping:
 
 - broken behavior → **Bug**
 - new capability → **Feature**
@@ -363,11 +363,11 @@ Použij tento jednoduchý mapping:
 
 ---
 
-## Priority pravidla
+## Priority rules
 
-Priority má agent navrhovat konzervativně.
+The agent should propose priority conservatively.
 
-### Bezpečné pravidlo
+### Safe rule
 
 - `Urgent`
   - security
@@ -376,82 +376,82 @@ Priority má agent navrhovat konzervativně.
 
 - `High`
   - release blocker
-  - významný delivery blocker
+  - significant delivery blocker
 
-- jinak:
+- otherwise:
   - `Medium`
   - `Low`
   - `No priority`
 
-A stále platí:
+And it still holds that:
 
-- `Lane Now` nikdy agent nenastavuje
-- cycle selection je ruční rozhodnutí člověka
-
----
-
-## K čemu je Triage v AI workflow skutečně dobrá
-
-Triage je užitečná jako:
-
-- explicitní review checkpoint
-- místo, kde opravíš špatně zadaný lane/type/priority
-- ochrana před tím, aby se špatně klasifikovaná AI issue ztratila v backlogu
-
-Pro AI-generated issue má tedy smysl hlavně tam, kde:
-
-- je `Lane Ready`
-- je `Lane Discovery`
-
-To je přesně ten okamžik, kdy chceš druhou kontrolu.
+- the agent never sets `Lane Now`
+- cycle selection is a human's manual decision
 
 ---
 
-## Co bylo potřeba v praxi uklidit
+## What Triage is really good for in an AI workflow
 
-Při zavádění workflow se ukázaly typické problémy:
+Triage is useful as:
 
-- dvojí lane model (`Lane *` vs `triage:*`)
-- chybějící type labels
-- starý `ready` label přežívající ve starých projektech
-- agenti vytvářející issue mimo Triage
-- nejasná hranice mezi `Type Discovery` a `Type Tech Debt`
+- an explicit review checkpoint
+- the place where you fix a wrongly assigned lane/type/priority
+- protection against a misclassified AI issue getting lost in the backlog
 
-Proto je důležité nejdřív:
+So for an AI-generated issue it mainly makes sense where:
 
-1. sjednotit labels
-2. vyčistit reprezentativní projekty
-3. sepsat policy a guidance
-4. vytvořit templates
-5. teprve pak ladit automations a MCP workflows
+- it's `Lane Ready`
+- it's `Lane Discovery`
+
+That's exactly the moment when you want a second check.
 
 ---
 
-## Doporučený rollout postup
+## What had to be cleaned up in practice
 
-### Fáze 1 — Team-level standard
+While rolling out the workflow, typical problems showed up:
 
-Zaveď pro celý tým:
+- a dual lane model (`Lane *` vs `triage:*`)
+- missing type labels
+- the old `ready` label surviving in older projects
+- agents creating issues outside Triage
+- an unclear boundary between `Type Discovery` and `Type Tech Debt`
+
+That's why it's important to first:
+
+1. unify the labels
+2. clean up representative projects
+3. write the policy and guidance
+4. create the templates
+5. only then tune automations and MCP workflows
+
+---
+
+## Recommended rollout procedure
+
+### Phase 1 — Team-level standard
+
+Introduce for the whole team:
 
 - `Lane *`
 - `Type *`
 - priority policy
-- krátkou guidance
-- automation spec
+- short guidance
+- an automation spec
 
-### Fáze 2 — Vyčištění klíčových projektů
+### Phase 2 — Clean up key projects
 
-Vyčisti několik reprezentativních projektů, aby vznikl reference model.
+Clean up a few representative projects to create a reference model.
 
-Např.:
+E.g.:
 
 - Span Chain / Observability Core
 - RAG GF AOS
 - GhostFactory AOS 3.0
 
-### Fáze 3 — Templates
+### Phase 3 — Templates
 
-Zaveď issue templates:
+Introduce issue templates:
 
 - Bug
 - Feature
@@ -459,22 +459,22 @@ Zaveď issue templates:
 - Follow-up
 - Tech Debt
 
-### Fáze 4 — Claude / agent skill
+### Phase 4 — Claude / agent skill
 
-Vytvoř agent skill, který:
+Create an agent skill that:
 
-- načte team docs
-- vybere správný template
-- vytvoří issue už ve správném tvaru
+- loads the team docs
+- picks the right template
+- creates the issue already in the right shape
 
-### Fáze 5 — Ověření v praxi
+### Phase 5 — Validation in practice
 
-Nejdřív testuj na reálných session reviews.
-Teprve pak dolaďuj další projekty nebo pokročilejší MCP workflows.
+First test on real session reviews.
+Only then tune additional projects or more advanced MCP workflows.
 
 ---
 
-## Doporučené rozdělení rolí
+## Recommended division of roles
 
 ### Linear
 - planning
@@ -483,37 +483,37 @@ Teprve pak dolaďuj další projekty nebo pokročilejší MCP workflows.
 - execution handoff
 - source of truth
 
-### Claude / externí agent
-- strukturované vytváření issue
-- první klasifikace
-- návrh priority
+### Claude / external agent
+- structured issue creation
+- first classification
+- priority proposal
 - follow-up generation
 
-### Člověk
+### Human
 - `Lane Now`
 - cycle selection
 - priority override
-- review checkpoint v Triage
+- review checkpoint in Triage
 
 ---
 
-## Doporučení natvrdo
+## Hard recommendation
 
-Pokud issue vytváří převážně Claude:
+If issues are mostly created by Claude:
 
-- nespolehni se jen na Triage
-- nauč Claude issue vytvářet správně už při vzniku
-- ale zároveň použij Triage jako druhou kontrolu pro `Lane Ready` a `Lane Discovery`
+- don't rely on Triage alone
+- teach Claude to create issues correctly right from the start
+- but also use Triage as a second check for `Lane Ready` and `Lane Discovery`
 
-To je nejpraktičtější hybridní model.
+That's the most practical hybrid model.
 
 ---
 
-## Shrnutí v jedné větě
+## Summary in one sentence
 
-Nejlepší AI-first workflow v Linearu není „nechat agenta dělat všechno“, ale postavit systém, kde:
+The best AI-first workflow in Linear isn't "let the agent do everything", but building a system where:
 
-- templates dávají strukturu,
-- agent dává první klasifikaci,
-- triage dává checkpoint,
-- a člověk rozhoduje o aktivní práci.
+- templates provide structure,
+- the agent provides the first classification,
+- triage provides the checkpoint,
+- and the human decides on active work.

@@ -1,26 +1,26 @@
 # Product-Dev Skills
 
-Obecné, workflow-neutrální skills pro AI-assisted product development. Nejsou navázané na žádný konkrétní issue tracker ani klasifikační model — fungují samostatně a dají se zkombinovat s [Linear workflow](../../linear-workflow/) skills.
+General, workflow-neutral skills for AI-assisted product development. They are not tied to any specific issue tracker or classification model — they work standalone and can be combined with the [Linear workflow](../../linear-workflow/) skills.
 
-Každý skill = jedna single-task instrukce.
+Each skill = a single single-task instruction.
 
 ---
 
 ## Skills
 
-| Skill | Účel |
+| Skill | Purpose |
 |---|---|
-| [PRD nebo note do issue tree](prd-to-issue-tree.md) | Rozpadne PRD nebo poznámky do issue tree s workstreamy a závislostmi |
-| [Spec z issue do implementace](issue-to-implementation-spec.md) | Převede issue do implementační specifikace s kroky, požadavky a riziky |
-| [Technické zadání pro AI nebo integraci](ai-integration-spec.md) | Převede business požadavek do technického zadání pro AI/integraci |
-| [Release notes](release-notes.md) | Stručné release notes — co se změnilo, pro koho, s jakým dopadem |
-| [Týdenní update projektu](weekly-project-update.md) | Krátký update se změnami, riziky a dalšími kroky pro stakeholdery |
-| [Shrnutí diskuze do rozhodnutí](discussion-to-decision.md) | Převede průběžnou diskuzi do strukturovaného rozhodnutí a akčních kroků |
+| [PRD or note to issue tree](prd-to-issue-tree.md) | Breaks a PRD or notes down into an issue tree with workstreams and dependencies |
+| [Issue to implementation spec](issue-to-implementation-spec.md) | Converts an issue into an implementation spec with steps, requirements, and risks |
+| [Technical spec for AI or integration](ai-integration-spec.md) | Converts a business requirement into a technical spec for AI/integration |
+| [Release notes](release-notes.md) | Concise release notes — what changed, for whom, with what impact |
+| [Weekly project update](weekly-project-update.md) | A short update with changes, risks, and next steps for stakeholders |
+| [Discussion to decision](discussion-to-decision.md) | Converts an ongoing discussion into a structured decision and action steps |
 
 ---
 
-## Doporučené použití
+## Recommended use
 
-**Rozpad větší práce** → `PRD nebo note do issue tree`, `Spec z issue do implementace`, `Technické zadání pro AI nebo integraci`
+**Breaking down larger work** → `PRD or note to issue tree`, `Issue to implementation spec`, `Technical spec for AI or integration`
 
-**Komunikace a reporting** → `Týdenní update projektu`, `Shrnutí diskuze do rozhodnutí`, `Release notes`
+**Communication and reporting** → `Weekly project update`, `Discussion to decision`, `Release notes`

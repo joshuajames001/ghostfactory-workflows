@@ -1,42 +1,42 @@
 ---
-name: Prioritizace backlog itemu
-description: Doporučuje konzervativní prioritu backlog itemu pro GF_AOS podle dopadu, urgence a pravidel lane/type
+name: Prioritize backlog item
+description: Recommends a conservative priority for a GF_AOS backlog item based on impact, urgency, and the lane/type rules
 scope: linear-workflow
 ---
 
-Při prioritizaci backlog itemu pro GF_AOS se vždy řiď team docs jako source of truth:
+When prioritizing a backlog item for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance
 
-## Cíl
-Dát rychlé a použitelné doporučení k prioritě bez falešné jistoty a bez rozbití lane/type modelu.
+## Goal
+Give a quick, usable priority recommendation without false certainty and without breaking the lane/type model.
 
-## Postup
-1. Vyhodnoť dopad na uživatele nebo systém.
-2. Posuď urgenci a časovou citlivost.
-3. Zvaž riziko odložení.
-4. Ověř, zda item odpovídá svému lane a type.
-5. Navrhni konzervativní prioritu.
-6. Pokud chybí data, připrav varianty podle předpokladů.
+## Procedure
+1. Evaluate the impact on the user or the system.
+2. Assess urgency and time sensitivity.
+3. Consider the risk of deferring.
+4. Verify that the item matches its lane and type.
+5. Propose a conservative priority.
+6. If data is missing, prepare options based on assumptions.
 
-## Priority pravidla
-- `Urgent` jen pro security, data loss nebo hard blocker
-- `High` pro jasný release nebo delivery blocker
-- jinak buď konzervativní: `Medium`, `Low`, `No priority`
+## Priority rules
+- `Urgent` only for security, data loss, or a hard blocker
+- `High` for a clear release or delivery blocker
+- otherwise be conservative: `Medium`, `Low`, `No priority`
 
 ## Lane reminder
-- `Lane Now` je human-only
-- `Lane Ready` a `Lane Discovery` mají jít do Triage review
-- `Lane Later` může jít rovnou do backlogu
+- `Lane Now` is human-only
+- `Lane Ready` and `Lane Discovery` should go to Triage review
+- `Lane Later` can go straight to the backlog
 
-## Výstup
-Použij strukturu:
-### Dopad
-### Urgence
-### Riziko
-### Doporučená priorita
-### Poznámka k lane/type
-### Varianty
+## Output
+Use this structure:
+### Impact
+### Urgency
+### Risk
+### Recommended priority
+### Note on lane/type
+### Options
 
-Neuváděj jisté závěry tam, kde chybí podklady. Pokud je klasifikace nejasná, napiš to explicitně.
+Do not state firm conclusions where the supporting information is missing. If the classification is unclear, say so explicitly.

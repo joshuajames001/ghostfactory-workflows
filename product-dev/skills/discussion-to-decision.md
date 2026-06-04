@@ -1,33 +1,33 @@
 ---
-name: Shrnutí diskuze do rozhodnutí
-description: Převádí průběžné diskuze do strukturovaného shrnutí s rozhodnutími a dalšími kroky
+name: Discussion to decision
+description: Converts an ongoing discussion into a structured summary with decisions and next steps
 scope: product-dev
 ---
 
-Vytvoř pracovní shrnutí diskuze pro produktový nebo vývojový tým.
+Create a working summary of a discussion for a product or development team.
 
-## Cíl
-Zkrátit delší diskuzi do přehledného výstupu, který podporuje rozhodnutí a další práci.
+## Goal
+Condense a longer discussion into a clear output that supports decisions and further work.
 
-## Vstup
-Chat, komentáře, poznámky z meetingu nebo jiná průběžná diskuze.
+## Input
+A chat, comments, meeting notes, or another ongoing discussion.
 
-## Postup
-1. Stručně shrň hlavní pointu.
-2. Odděl potvrzená fakta od interpretace.
-3. Vypiš přijatá i chybějící rozhodnutí.
-4. Identifikuj otevřené otázky, rizika a závislosti.
-5. Navrhni konkrétní akční kroky.
+## Procedure
+1. Briefly summarize the main point.
+2. Separate confirmed facts from interpretation.
+3. List the decisions made and the ones still missing.
+4. Identify open questions, risks, and dependencies.
+5. Propose concrete action steps.
 
-## Výstup
-Použij strukturu:
-### Shrnutí
-### Fakta
-### Rozhodnutí
-### Otevřené otázky
-### Akční kroky
+## Output
+Use this structure:
+### Summary
+### Facts
+### Decisions
+### Open questions
+### Action steps
 
-## Pravidla
-- Odděluj fakta od interpretace.
-- Pokud je něco nejednoznačné, napiš to explicitně.
-- Výstup má být vhodný jako komentář nebo issue update.
+## Rules
+- Separate facts from interpretation.
+- If something is ambiguous, state it explicitly.
+- The output should be suitable as a comment or an issue update.

@@ -12,18 +12,18 @@ Use this template when:
 
 ---
 
-## Kontext
+## Context
 
-## Problém / otázka
+## Problem / question
 
-## Možné směry
+## Possible directions
 -
 -
 -
 
 ## Exit criteria
-- [ ] máme doporučené rozhodnutí
-- [ ] máme důvod proč
-- [ ] máme jasný next step
+- [ ] we have a recommended decision
+- [ ] we have the reason why
+- [ ] we have a clear next step
 
-## Zdroj / reference
+## Source / references

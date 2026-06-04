@@ -1,29 +1,29 @@
 # Template Selection Rules (template)
 
-Pravidla pro výběr issue template v týmu `<TEAM>`. Template nezajišťuje finální triage, ale výrazně zlepšuje kvalitu rozhodování. Viz [`../templates/`](../templates/).
+Rules for choosing an issue template in the `<TEAM>` team. A template does not guarantee final triage, but it significantly improves decision quality. See [`../templates/`](../templates/).
 
 ## 1. Bug
-Použij, když: něco je rozbité, regression, systém se chová jinak než má, existuje expected vs actual.
-Mapuje na: `Type Bug` · `Lane Ready` (jasné co opravit) nebo `Lane Discovery` (nutné nejdřív zjistit příčinu) → do Triage.
+Use when: something is broken, a regression, the system behaves differently than it should, there is an expected vs actual.
+Maps to: `Type Bug` · `Lane Ready` (clear what to fix) or `Lane Discovery` (the cause must be found first) → to Triage.
 
 ## 2. Feature
-Použij, když: přidáváš novou schopnost / screen / API / workflow / produktovou hodnotu a scope míří na implementation.
-Mapuje na: `Type Feature` · `Lane Ready` (→ Triage review) nebo `Lane Later` (validní, ale ne teď).
+Use when: you are adding a new capability / screen / API / workflow / product value and the scope is aimed at implementation.
+Maps to: `Type Feature` · `Lane Ready` (→ Triage review) or `Lane Later` (valid, but not now).
 
 ## 3. Discovery
-Použij, když: cílem ještě není implementace, chybí rozhodnutí, řešíš architekturu/varianty/nejasný scope, je to epic, audit nebo výzkumná otázka.
-Mapuje na: `Type Discovery` · `Lane Discovery` → do Triage.
+Use when: implementation is not yet the goal, a decision is missing, you are working through architecture/options/unclear scope, or it's an epic, an audit, or a research question.
+Maps to: `Type Discovery` · `Lane Discovery` → to Triage.
 
 ## 4. Follow-up
-Použij, když: issue navazuje na review nebo předchozí hotovou práci, je to další krok mimo původní scope, chceš zachovat návaznost.
-Mapuje na: `Type Follow-up` · `Lane Later` nebo `Lane Ready` (→ Triage).
+Use when: the issue follows up on a review or previously completed work, it's a next step outside the original scope, or you want to preserve continuity.
+Maps to: `Type Follow-up` · `Lane Later` or `Lane Ready` (→ Triage).
 
 ## 5. Tech Debt
-Použij, když: nejde primárně o novou schopnost, cílem je cleanup / refactor / maintainability / infra hardening.
-Mapuje na: `Type Tech Debt` · `Lane Ready` (konkrétní) nebo `Lane Later`.
-Pozor: pokud issue obsahuje otevřené otázky před implementací → není to Tech Debt, ale Discovery.
+Use when: it's not primarily about a new capability, and the goal is cleanup / refactor / maintainability / infra hardening.
+Maps to: `Type Tech Debt` · `Lane Ready` (concrete) or `Lane Later`.
+Caution: if the issue contains open questions before implementation → it's not Tech Debt, but Discovery.
 
-## Rychlé rozhodovací pravidlo
+## Quick decision rule
 - broken behavior → **Bug**
 - new capability → **Feature**
 - not enough clarity / need decision / audit before action → **Discovery**
@@ -31,5 +31,5 @@ Pozor: pokud issue obsahuje otevřené otázky před implementací → není to 
 - cleanup / refactor / hardening without open decision → **Tech Debt**
 
 ## Priority & Triage reminder
-- `Lane Now` nikdy automaticky; prioritu konzervativně; aktivní práci a cycle vybírá člověk
-- AI-generated: `Lane Discovery` a `Lane Ready` → do Triage · `Lane Later` → rovnou backlog
+- `Lane Now` never automatically; priority conservatively; active work and cycle are chosen by a human
+- AI-generated: `Lane Discovery` and `Lane Ready` → to Triage · `Lane Later` → straight to backlog

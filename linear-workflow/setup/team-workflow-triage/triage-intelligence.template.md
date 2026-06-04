@@ -1,7 +1,7 @@
 # Triage Intelligence — Extra Guidance (template)
 
-> Vlož do `team-settings/workflow/triage` → triage intelligence (extra guidance).
-> Model je generický; uprav jen sekci **Routing hints** (projekty + doménové labely) na své.
+> Paste into `team-settings/workflow/triage` → triage intelligence (extra guidance).
+> The model is generic; adjust only the **Routing hints** section (projects + domain labels) to your own.
 
 This workspace contains multiple products and agent-assisted workflows. Use Linear as the control plane for planning, triage, execution handoff, and backlog hygiene.
 

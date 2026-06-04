@@ -4,67 +4,67 @@ description: Create correctly labeled issues for GF_AOS with appropriate templat
 scope: linear-workflow
 ---
 
-Při vytváření issue pro GF_AOS se vždy řiď team docs jako source of truth:
+When creating an issue for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance
 - Template Selection Rules
 
-Před vytvořením issue nejdřív vyber správný issue template:
+Before creating an issue, first pick the correct issue template:
 - Bug — broken behavior, regression, expected vs actual
-- Feature — nová schopnost nebo delivery item
-- Discovery — nejasný scope, otázka, epic, architektonické rozhodnutí
-- Follow-up — práce vzniklá z review nebo navazující na hotové issue
+- Feature — a new capability or delivery item
+- Discovery — unclear scope, a question, an epic, an architectural decision
+- Follow-up — work arising from a review or following on from a completed issue
 - Tech Debt — refactor, cleanup, hardening, maintainability
 
-Issue vytvoř rovnou správně, nespoléhej na Triage. Issue od Claude obvykle nevstupují do team Triage, takže lane a type musí být nastavené už při vytvoření.
+Create the issue correctly from the start; do not rely on Triage. Issues from Claude usually do not enter team Triage, so the lane and type must already be set at creation time.
 
-Každé issue musí mít:
-- přesně 1 `Lane *` label
-- přesně 1 `Type *` label
-- volitelné domain labels
-- prioritu nastavenou konzervativně
+Every issue must have:
+- exactly 1 `Lane *` label
+- exactly 1 `Type *` label
+- optional domain labels
+- a conservatively set priority
 
-Používej jen tyto lane labels:
+Use only these lane labels:
 - `Lane Now`
 - `Lane Ready`
 - `Lane Discovery`
 - `Lane Later`
 
-Používej jen tyto type labels:
+Use only these type labels:
 - `Type Bug`
 - `Type Feature`
 - `Type Discovery`
 - `Type Follow-up`
 - `Type Tech Debt`
 
-Nikdy nepoužívej:
+Never use:
 - `triage:*`
-- starý `ready`
+- the old `ready`
 
-Pravidla pro lane:
-- `Lane Now` nikdy nenastavuj automaticky
-- pokud je issue konkrétní a implementovatelné, použij `Lane Ready`
-- pokud issue obsahuje otevřené otázky nebo potřebuje audit či rozhodnutí před implementací, použij `Lane Discovery`
-- pokud je práce validní, ale neaktuální nebo odložená, použij `Lane Later`
+Rules for the lane:
+- never set `Lane Now` automatically
+- if the issue is specific and implementable, use `Lane Ready`
+- if the issue contains open questions or needs an audit or a decision before implementation, use `Lane Discovery`
+- if the work is valid but not currently relevant or deferred, use `Lane Later`
 
-Pravidla pro type:
+Rules for the type:
 - broken behavior / regression / wrong behavior → `Type Bug`
-- nová schopnost / nový screen / API / workflow / delivery → `Type Feature`
-- výzkum / epic / arch rozhodnutí / otevřená otázka → `Type Discovery`
-- navazuje na review, retrospektivu nebo předchozí issue → `Type Follow-up`
+- new capability / new screen / API / workflow / delivery → `Type Feature`
+- research / epic / architectural decision / open question → `Type Discovery`
+- follows on from a review, retrospective, or previous issue → `Type Follow-up`
 - refactor / cleanup / infra hardening / maintainability → `Type Tech Debt`
-- pokud issue obsahuje otevřené otázky, audit nebo rozhodnutí nutné před implementací, použij `Type Discovery`, i když technicky souvisí s cleanupem nebo hardeningem
+- if the issue contains open questions, an audit, or a decision that must be made before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening
 
 Priority:
-- `Urgent` jen pro security, data loss nebo hard blocker
-- `High` pro jasný release nebo delivery blocker
-- jinak buď konzervativní: `Medium`, `Low` nebo `No priority`
-- prioritu nepřestřeluj
+- `Urgent` only for security, data loss, or a hard blocker
+- `High` for a clear release or delivery blocker
+- otherwise be conservative: `Medium`, `Low`, or `No priority`
+- do not overshoot the priority
 
-Při psaní issue používej strukturu odpovídající zvolenému template.
+When writing the issue, use the structure matching the chosen template.
 
-Pro Bug použij sekce:
+For a Bug, use the sections:
 - What happened
 - Why it matters
 - Expected behavior
@@ -73,38 +73,38 @@ Pro Bug použij sekce:
 - Acceptance criteria
 - Related issue / review context
 
-Pro Feature použij sekce:
-- Kontext
-- Cíl
+For a Feature, use the sections:
+- Context
+- Goal
 - Scope
 - Out of scope
 - Acceptance criteria
 
-Pro Discovery použij sekce:
-- Kontext
-- Problém / otázka
-- Možné směry
+For a Discovery, use the sections:
+- Context
+- Problem / question
+- Possible directions
 - Exit criteria
-- Zdroj / reference
+- Source / reference
 
-Pro Follow-up použij sekce:
+For a Follow-up, use the sections:
 - What
 - Why
-- Řešení
+- Solution
 - Acceptance criteria
-- Kontext
+- Context
 
-Pro Tech Debt použij sekce:
-- Problém
-- Řešení
+For a Tech Debt, use the sections:
+- Problem
+- Solution
 - Done When
-- Poznámka
+- Note
 
-Při session review:
-- z každého bodu nejdřív rozhodni, jestli jde o Bug, Feature, Discovery, Follow-up nebo Tech Debt
-- issue vytvářej jen tehdy, když je to skutečně samostatná práce
-- pokud si nejsi jistý mezi `Lane Ready` a `Lane Discovery`, zvol `Lane Discovery`
-- pokud si nejsi jistý mezi `Type Feature` a `Type Tech Debt`, zvaž, zda jde o novou schopnost nebo jen zlepšení implementace
-- pokud si nejsi jistý mezi `Type Tech Debt` a `Type Discovery`, a issue obsahuje otevřené otázky, audit nebo rozhodnutí před implementací, zvol `Type Discovery`
+During session review:
+- for each point, first decide whether it is a Bug, Feature, Discovery, Follow-up, or Tech Debt
+- create an issue only when it is genuinely standalone work
+- if you are unsure between `Lane Ready` and `Lane Discovery`, choose `Lane Discovery`
+- if you are unsure between `Type Feature` and `Type Tech Debt`, consider whether it is a new capability or just an implementation improvement
+- if you are unsure between `Type Tech Debt` and `Type Discovery`, and the issue contains open questions, an audit, or a decision before implementation, choose `Type Discovery`
 
-Cílem je, aby nové issue byly vytvořené rovnou ve správném tvaru a bez potřeby dodatečné triage opravy.
+The goal is for new issues to be created in the correct shape right away, with no need for a follow-up triage fix.

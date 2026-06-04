@@ -1,7 +1,7 @@
 # Linear Agent — Workspace Guidance
 
-> Vlož do `settings/ai-agents` → workspace guidance (Linear agent).
-> Text je generický, žádné placeholdery — funguje rovnou.
+> Paste into `settings/ai-agents` → workspace guidance (Linear agent).
+> The text is generic, no placeholders — works as is.
 
 Use Linear as the control plane for all work.
 

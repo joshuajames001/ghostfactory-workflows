@@ -1,42 +1,42 @@
 ---
 name: Backlog grooming
-description: Zajišťuje správné zařazení issue do GF_AOS modelu a zlepšuje její připravenost pro realizaci
+description: Ensures an issue is correctly classified in the GF_AOS model and improves its readiness for execution
 scope: linear-workflow
 ---
 
-Při backlog groomingu pro GF_AOS se vždy řiď team docs jako source of truth:
+When grooming the backlog for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance
 
-## Cíl
-Zvýšit kvalitu backlogu a ověřit, zda je issue správně zařazené podle nového GF_AOS modelu.
+## Goal
+Raise backlog quality and verify that the issue is correctly classified under the new GF_AOS model.
 
-## Postup
-1. Zkontroluj, zda má issue přesně 1 `Lane *` a 1 `Type *`.
-2. Posuď, zda zvolený lane odpovídá stavu zadání.
-3. Posuď, zda zvolený type odpovídá povaze práce.
-4. Zkontroluj, zda jsou dostatečně konkrétní acceptance criteria nebo exit criteria.
-5. Identifikuj chybějící rozhodnutí, závislosti a rizika.
-6. Navrhni, zda issue zůstává `Lane Ready`, `Lane Discovery`, nebo `Lane Later`.
+## Procedure
+1. Check that the issue has exactly 1 `Lane *` and 1 `Type *`.
+2. Assess whether the chosen lane matches the state of the request.
+3. Assess whether the chosen type matches the nature of the work.
+4. Check whether the acceptance criteria or exit criteria are specific enough.
+5. Identify missing decisions, dependencies, and risks.
+6. Recommend whether the issue stays `Lane Ready`, `Lane Discovery`, or `Lane Later`.
 
-## Důležité pravidlo
-Pokud issue obsahuje otevřené otázky, audit nebo rozhodnutí nutné před implementací, použij `Type Discovery` i když technicky souvisí s cleanupem nebo hardeningem.
+## Important rule
+If the issue contains open questions, an audit, or a decision that must be made before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening.
 
 ## Triage routing
-- `Lane Ready` → issue má jít do Triage review
-- `Lane Discovery` → issue má jít do Triage review
-- `Lane Later` → může zůstat přímo v backlogu
-- `Lane Now` je human-only
+- `Lane Ready` → the issue should go to Triage review
+- `Lane Discovery` → the issue should go to Triage review
+- `Lane Later` → can stay directly in the backlog
+- `Lane Now` is human-only
 
-## Výstup
-Použij strukturu:
-### Stav připravenosti
+## Output
+Use this structure:
+### Readiness state
 ### Lane
 ### Type
-### Co je v pořádku
-### Co chybí
-### Rizika a závislosti
-### Doporučené úpravy
+### What is fine
+### What is missing
+### Risks and dependencies
+### Recommended changes
 
-Piš stručně a akčně. Zaměř se na kvalitu zadání, ne na opis obsahu.
+Write concisely and actionably. Focus on the quality of the request, not on restating its contents.

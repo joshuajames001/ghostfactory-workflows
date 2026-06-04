@@ -6,9 +6,9 @@
 
 ---
 
-## Kontext
+## Context
 
-## Cíl
+## Goal
 
 ## Scope
 -

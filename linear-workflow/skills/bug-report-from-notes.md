@@ -1,45 +1,45 @@
 ---
-name: Bug report z poznámek
-description: Převede neformální bug poznámky do kvalitního issue v GF_AOS workflow
+name: Bug report from notes
+description: Converts informal bug notes into a quality issue in the GF_AOS workflow
 scope: linear-workflow
 ---
 
-Při převodu poznámek do bug issue pro GF_AOS se vždy řiď team docs jako source of truth:
+When converting notes into a bug issue for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Short Agent Guidance
 - Template Selection Rules
 
-## Cíl
-Převést neformální bug poznámky do kvalitního issue ve správném GF_AOS workflow modelu.
+## Goal
+Convert informal bug notes into a quality issue in the correct GF_AOS workflow model.
 
-## Vždy použij template `Bug`.
+## Always use the `Bug` template.
 
-## Postup
-1. Urči kontext vzniku problému.
-2. Navrhni nebo doplň repro steps.
-3. Odděl expected result a actual result.
-4. Odhadni dopad.
-5. Doplň acceptance criteria.
-6. Nastav správný lane a type.
-7. Navrhni konzervativní prioritu.
+## Procedure
+1. Determine the context in which the problem arose.
+2. Propose or fill in repro steps.
+3. Separate the expected result from the actual result.
+4. Estimate the impact.
+5. Add acceptance criteria.
+6. Set the correct lane and type.
+7. Propose a conservative priority.
 
 ## Type
-- vždy `Type Bug`, pokud jde o broken behavior nebo regression
-- pokud po analýze zjistíš, že nejde o bug ale o audit / rozhodnutí, převeď to na `Type Discovery`
+- always `Type Bug` if it concerns broken behavior or a regression
+- if your analysis shows that it is not a bug but an audit / decision, convert it to `Type Discovery`
 
 ## Lane
-- pokud je bug konkrétní a opravitelný → `Lane Ready`
-- pokud chybí příčina nebo rozhodnutí před implementací → `Lane Discovery`
-- pokud je validní, ale neaktuální → `Lane Later`
-- `Lane Now` nikdy automaticky
+- if the bug is specific and fixable → `Lane Ready`
+- if the cause is unknown or a decision is needed before implementation → `Lane Discovery`
+- if it is valid but not currently relevant → `Lane Later`
+- never set `Lane Now` automatically
 
 ## Triage routing
-- `Lane Ready` → do Triage review
-- `Lane Discovery` → do Triage review
-- `Lane Later` → může rovnou do backlogu
+- `Lane Ready` → to Triage review
+- `Lane Discovery` → to Triage review
+- `Lane Later` → can go straight to the backlog
 
-## Výstup
-Použij strukturu:
+## Output
+Use this structure:
 ### What happened
 ### Why it matters
 ### Expected behavior
@@ -49,6 +49,6 @@ Použij strukturu:
 ### Related issue / review context
 ### Lane
 ### Type
-### Doporučená priorita
+### Recommended priority
 
-Pokud repro steps nejsou jisté, označ je jako nepotvrzené. Piš stručně a věcně.
+If the repro steps are uncertain, mark them as unconfirmed. Write concisely and factually.

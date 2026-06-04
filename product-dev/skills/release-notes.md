@@ -1,32 +1,32 @@
 ---
 name: Release notes
-description: Připravuje stručné release notes, které srozumitelně shrnou změny a jejich dopad
+description: Prepares concise release notes that clearly summarize the changes and their impact
 scope: product-dev
 ---
 
-Připrav stručné release notes pro interní nebo externí použití.
+Prepare concise release notes for internal or external use.
 
-## Cíl
-Srozumitelně popsat, co se změnilo, pro koho a s jakým dopadem.
+## Goal
+Clearly describe what changed, for whom, and with what impact.
 
-## Vstup
-Seznam změn, issue, dokončené práce nebo poznámky k releasu.
+## Input
+A list of changes, issues, completed work, or release notes.
 
-## Postup
-1. Seskup změny do logických tematických oblastí.
-2. Rozliš mezi změnami viditelnými pro uživatele a interními technickými změnami.
-3. U každé relevantní změny popiš, co se změnilo a proč je to důležité.
-4. Pokud jsou známá omezení nebo rollout poznámky, uveď je.
-5. Vynech interní šum, který nemá hodnotu pro cílového čtenáře.
+## Procedure
+1. Group the changes into logical thematic areas.
+2. Distinguish between user-visible changes and internal technical changes.
+3. For each relevant change, describe what changed and why it matters.
+4. If there are known limitations or rollout notes, state them.
+5. Leave out internal noise that has no value for the target reader.
 
-## Výstup
-Použij strukturu:
-### Přehled release
-### Změny pro uživatele
-### Interní změny
-### Omezení nebo poznámky
+## Output
+Use this structure:
+### Release overview
+### User-facing changes
+### Internal changes
+### Limitations or notes
 
-## Pravidla
-- Piš stručně, srozumitelně a bez marketingové omáčky.
-- Neuváděj technické detaily, pokud nepomáhají pochopení dopadu.
-- Pokud není cílové publikum jasné, zvol neutrální interní styl.
+## Rules
+- Write concisely, clearly, and without marketing fluff.
+- Do not include technical details unless they help convey the impact.
+- If the target audience is unclear, use a neutral internal style.

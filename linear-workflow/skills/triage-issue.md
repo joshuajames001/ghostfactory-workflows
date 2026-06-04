@@ -1,76 +1,76 @@
 ---
 name: Triage issue
-description: Přiřazuje každou issue jediný Lane a Type, doporučí další krok a prioritu
+description: Assigns each issue a single Lane and Type, recommends the next step and a priority
 scope: linear-workflow
 ---
 
-Při triage issue pro GF_AOS se vždy řiď team docs jako source of truth:
+When triaging an issue for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance
 - Template Selection Rules
 
-## Cíl
-Připravit rychlé a použitelné triage rozhodnutí bez rozbití GF_AOS workflow modelu.
+## Goal
+Produce a quick, usable triage decision without breaking the GF_AOS workflow model.
 
-## Povinný model
-Každé issue musí mít:
-- přesně 1 `Lane *`
-- přesně 1 `Type *`
-- volitelné domain labels
-- prioritu
+## Mandatory model
+Every issue must have:
+- exactly 1 `Lane *`
+- exactly 1 `Type *`
+- optional domain labels
+- a priority
 
-Používej jen:
+Use only:
 - `Lane Now`, `Lane Ready`, `Lane Discovery`, `Lane Later`
 - `Type Bug`, `Type Feature`, `Type Discovery`, `Type Follow-up`, `Type Tech Debt`
 
-Nikdy nepoužívej:
+Never use:
 - `triage:*`
-- starý `ready`
-- více lane labelů
-- více type labelů
+- the old `ready`
+- multiple lane labels
+- multiple type labels
 
-## Postup
-1. Shrň podstatu issue jednou až dvěma větami.
-2. Rozhodni správný `Type *`.
-3. Rozhodni správný `Lane *`.
-4. Navrhni další krok.
-5. Posuď, zda issue musí do Triage review nebo může rovnou do backlogu.
-6. Navrhni konzervativní prioritu.
-7. Vypiš chybějící informace.
+## Procedure
+1. Summarize the essence of the issue in one or two sentences.
+2. Decide the correct `Type *`.
+3. Decide the correct `Lane *`.
+4. Propose the next step.
+5. Assess whether the issue must go to Triage review or can go straight to the backlog.
+6. Propose a conservative priority.
+7. List the missing information.
 
-## Type pravidla
+## Type rules
 - broken behavior / regression / wrong behavior → `Type Bug`
-- nová schopnost / delivery item → `Type Feature`
-- výzkum / epic / arch rozhodnutí / audit / otevřená otázka → `Type Discovery`
-- navazuje na review nebo dřívější issue → `Type Follow-up`
+- new capability / delivery item → `Type Feature`
+- research / epic / architectural decision / audit / open question → `Type Discovery`
+- follows on from a review or an earlier issue → `Type Follow-up`
 - refactor / cleanup / infra hardening / maintainability → `Type Tech Debt`
-- pokud issue obsahuje otevřené otázky, audit nebo rozhodnutí před implementací, použij `Type Discovery` i když technicky souvisí s cleanupem nebo hardeningem
+- if the issue contains open questions, an audit, or a decision before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening
 
-## Lane pravidla
-- implementovatelná a konkrétní práce → `Lane Ready`
-- nejasný scope / potřeba rozhodnutí → `Lane Discovery`
-- validní, ale neaktuální práce → `Lane Later`
-- `Lane Now` nikdy nenastavuj automaticky
+## Lane rules
+- implementable, specific work → `Lane Ready`
+- unclear scope / decision needed → `Lane Discovery`
+- valid but not currently relevant work → `Lane Later`
+- never set `Lane Now` automatically
 
 ## Triage routing
-- `Lane Ready` → issue má jít do Triage review
-- `Lane Discovery` → issue má jít do Triage review
-- `Lane Later` → může jít rovnou do backlogu
+- `Lane Ready` → the issue should go to Triage review
+- `Lane Discovery` → the issue should go to Triage review
+- `Lane Later` → can go straight to the backlog
 
 ## Priority
-- `Urgent` jen pro security, data loss, hard blocker
-- `High` pro jasný release nebo delivery blocker
-- jinak buď konzervativní: `Medium`, `Low`, `No priority`
+- `Urgent` only for security, data loss, a hard blocker
+- `High` for a clear release or delivery blocker
+- otherwise be conservative: `Medium`, `Low`, `No priority`
 
-## Výstup
-Použij strukturu:
-### Shrnutí
+## Output
+Use this structure:
+### Summary
 ### Type
 ### Lane
-### Doporučení
+### Recommendation
 ### Triage routing
-### Chybějící informace
-### Doporučená priorita
+### Missing information
+### Recommended priority
 
-Piš stručně, rozhodovacím jazykem a nevymýšlej detaily bez označení nejistoty.
+Write concisely, in decisive language, and do not invent details without flagging the uncertainty.

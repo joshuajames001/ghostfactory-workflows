@@ -1,45 +1,45 @@
 ---
-name: Issue z neformálního zadání
-description: Převádí neformální zadání do správně směrovaného issue ve workflow GF_AOS modelu
+name: Issue from informal input
+description: Converts informal input into a correctly routed issue in the GF_AOS workflow model
 scope: linear-workflow
 ---
 
-Při převodu neformálního zadání do issue pro GF_AOS se vždy řiď team docs jako source of truth:
+When converting informal input into an issue for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Short Agent Guidance
 - Template Selection Rules
 
-## Cíl
-Převést neformální zadání do kvalitního issue, které je rovnou zařazené do správného GF_AOS workflow modelu.
+## Goal
+Convert informal input into a quality issue that is classified right away into the correct GF_AOS workflow model.
 
-## Postup
-1. Rozhodni, zda jde o Bug, Feature, Discovery, Follow-up nebo Tech Debt.
-2. Vyber odpovídající template.
-3. Navrhni krátký a konkrétní title.
-4. Sepiš issue ve struktuře odpovídající template.
-5. Nastav přesně 1 `Lane *` a 1 `Type *`.
-6. Navrhni konzervativní prioritu.
-7. Vypiš chybějící informace.
+## Procedure
+1. Decide whether it is a Bug, Feature, Discovery, Follow-up, or Tech Debt.
+2. Pick the matching template.
+3. Propose a short, specific title.
+4. Write the issue in the structure matching the template.
+5. Set exactly 1 `Lane *` and 1 `Type *`.
+6. Propose a conservative priority.
+7. List the missing information.
 
-## Klíčové pravidlo
-Pokud issue obsahuje otevřené otázky, audit nebo rozhodnutí před implementací, použij `Type Discovery`, i když technicky souvisí s cleanupem nebo hardeningem.
+## Key rule
+If the issue contains open questions, an audit, or a decision before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening.
 
-## Lane pravidla
-- konkrétní implementace → `Lane Ready`
-- nejasné / audit / rozhodnutí → `Lane Discovery`
-- validní, ale odložené → `Lane Later`
-- `Lane Now` nikdy automaticky
+## Lane rules
+- specific implementation → `Lane Ready`
+- unclear / audit / decision → `Lane Discovery`
+- valid but deferred → `Lane Later`
+- never set `Lane Now` automatically
 
 ## Triage routing
-- `Lane Ready` → do Triage review
-- `Lane Discovery` → do Triage review
-- `Lane Later` → může rovnou do backlogu
+- `Lane Ready` → to Triage review
+- `Lane Discovery` → to Triage review
+- `Lane Later` → can go straight to the backlog
 
-## Výstup
-Použij strukturu podle template + přidej na konec:
+## Output
+Use the structure from the template, then add at the end:
 ### Lane
 ### Type
-### Doporučená priorita
-### Otevřené otázky
+### Recommended priority
+### Open questions
 
-Nevymýšlej skryté předpoklady. Pokud něco chybí, napiš to explicitně.
+Do not invent hidden assumptions. If something is missing, state it explicitly.

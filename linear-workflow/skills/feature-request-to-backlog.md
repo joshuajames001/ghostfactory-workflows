@@ -1,55 +1,55 @@
 ---
-name: Feature request do backlogu
-description: Převeď nápad do strukturovaného GF_AOS backlog issue s vhodným šablonováním a prioritou
+name: Feature request to backlog
+description: Convert an idea into a structured GF_AOS backlog issue with the right template and priority
 scope: linear-workflow
 ---
 
-Při převodu nápadu do backlog issue pro GF_AOS se vždy řiď team docs jako source of truth:
+When converting an idea into a backlog issue for GF_AOS, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Short Agent Guidance
 - Template Selection Rules
 
-## Cíl
-Převést nápad do strukturovaného issue vhodného pro backlog refinement a správně ho zařadit do GF_AOS workflow.
+## Goal
+Convert an idea into a structured issue suitable for backlog refinement and classify it correctly in the GF_AOS workflow.
 
-## Postup
-1. Rozhodni, zda je vhodnější template `Feature` nebo `Discovery`.
-2. Sepiš issue v odpovídající struktuře template.
-3. Odděl problém od navrhovaného řešení.
-4. Popiš přínos, scope a otevřené otázky.
-5. Nastav přesně 1 `Lane *` a 1 `Type *`.
-6. Prioritu navrhni konzervativně.
+## Procedure
+1. Decide whether the `Feature` or `Discovery` template is more appropriate.
+2. Write the issue using the structure of the matching template.
+3. Separate the problem from the proposed solution.
+4. Describe the benefit, scope, and open questions.
+5. Set exactly 1 `Lane *` and 1 `Type *`.
+6. Propose a conservative priority.
 
-## Rozhodování
-- nový build / capability / delivery item → `Feature`
-- nejasný směr / otázka / audit / potřebné rozhodnutí → `Discovery`
-- pokud nejsou jasné hranice scope, preferuj `Discovery`
+## Deciding
+- new build / capability / delivery item → `Feature`
+- unclear direction / question / audit / decision needed → `Discovery`
+- if the scope boundaries are unclear, prefer `Discovery`
 
 ## Lane
-- dobře definovaný návrh → `Lane Ready`
-- nejasný návrh / nutná validace → `Lane Discovery`
-- validní, ale neaktuální nápad → `Lane Later`
-- `Lane Now` nikdy automaticky
+- well-defined proposal → `Lane Ready`
+- unclear proposal / validation needed → `Lane Discovery`
+- valid but not currently relevant idea → `Lane Later`
+- never set `Lane Now` automatically
 
 ## Type
-- nová schopnost → `Type Feature`
-- otevřená otázka / epic / audit → `Type Discovery`
-- pokud issue obsahuje otevřené otázky před implementací, použij `Type Discovery`
+- new capability → `Type Feature`
+- open question / epic / audit → `Type Discovery`
+- if the issue contains open questions before implementation, use `Type Discovery`
 
 ## Triage routing
-- `Lane Ready` → do Triage review
-- `Lane Discovery` → do Triage review
-- `Lane Later` → může rovnou do backlogu
+- `Lane Ready` → to Triage review
+- `Lane Discovery` → to Triage review
+- `Lane Later` → can go straight to the backlog
 
-## Výstup
-Použij strukturu:
-### Cíl
-### Uživatel / segment
-### Problém
-### Přínos
-### Návrh scope
-### Rizika / závislosti
-### Otevřené otázky
+## Output
+Use this structure:
+### Goal
+### User / segment
+### Problem
+### Benefit
+### Proposed scope
+### Risks / dependencies
+### Open questions
 ### Lane
 ### Type
-### Doporučená priorita
+### Recommended priority

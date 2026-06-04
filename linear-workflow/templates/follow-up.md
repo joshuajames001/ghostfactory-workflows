@@ -15,13 +15,13 @@ Use this template when:
 
 ## Why
 
-## Řešení
+## Solution
 
 ## Acceptance criteria
 - [ ]
 - [ ]
 - [ ]
 
-## Kontext
+## Context
 
 _Link to parent issue or review that generated this._
