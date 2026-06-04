@@ -50,7 +50,8 @@ ghostfactory-workflows/
 │   ├── setup/                    copy-paste configs mapped to Linear settings
 │   ├── policy/                   canonical rules the skills reference
 │   ├── skills/                   7 AI skills for issue creation / triage / hygiene
-│   └── templates/                5 issue templates (Bug · Feature · Discovery · Follow-up · Tech Debt)
+│   ├── templates/                5 issue templates (Bug · Feature · Discovery · Follow-up · Tech Debt)
+│   └── claude-skill/             bonus: installable Claude Code skill bundling the whole workflow
 └── product-dev/              🧩 general AI skills (tracker-agnostic)
     └── skills/                   6 skills: PRD→issue tree, impl spec, release notes, reporting
 ```

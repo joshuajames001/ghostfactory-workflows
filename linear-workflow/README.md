@@ -23,11 +23,15 @@ Built for solo founders and small teams where the backlog can otherwise grow fas
 
 ### Skills
 
-Reusable single-task modules for Claude (or any AI agent) working in Linear.
+Single-task **skills** for your Linear agent — registered in `settings/ai-agents` → agent personalization → Skills.
 
 - **[Linear Skills](skills/)** — 7 skills for issue creation, triage and backlog hygiene.
 
 > General-purpose (non-Linear) skills live in [`../product-dev/skills/`](../product-dev/skills/).
+
+### Claude Code skill (bonus)
+
+- **[`claude-skill/`](claude-skill/)** — one installable Claude Code skill that bundles the whole workflow, kept in sync with `policy/` and `setup/` via links.
 
 ### Templates
 
