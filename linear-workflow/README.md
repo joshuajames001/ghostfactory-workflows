@@ -1,30 +1,29 @@
-# GhostFactory Workflows
+# Linear AI-First Workflow
 
-Public workflows, issue models and skills for AI-first product development.
+Using Linear as a **control plane** when Claude (or another agent) creates most of your issues — not humans.
 
-Built for solo founders and small teams where issues are created by agents, not humans.
+Built for solo founders and small teams where the backlog can otherwise grow faster than it shrinks: every session review spawns new issues, and the cycle never ends. This workflow stops that with a strict lane/type model plus Triage as a checkpoint.
 
 ---
 
 ## What's here
 
-### Workflows
+### Workflow guide
 
-Practical guides for running AI-assisted development workflows.
-
-- **[Linear AI-First Issue Workflow](workflows/linear-ai-issue-workflow.md)**
-  — How to use Linear as a control plane when Claude or another agent creates most of your issues. Covers lane/type model, Triage as checkpoint, hybrid model, priority rules and rollout steps.
+- **[Linear AI-First Issue Workflow](workflow.md)**
+  — Full guide: lane/type model, Triage as checkpoint, the hybrid model, priority rules and a step-by-step rollout.
 
 ### Skills
 
-Reusable workflow modules for Claude (or any AI agent) working in Linear.
+Reusable single-task modules for Claude (or any AI agent) working in Linear.
 
-- **[Linear Skills Overview](skills/linear-skills-overview.md)**
-  — Overview of operational skills for issue creation, triage, backlog hygiene and reporting.
+- **[Linear Skills](skills/)** — 7 skills for issue creation, triage and backlog hygiene.
+
+> General-purpose (non-Linear) skills live in [`../product-dev/skills/`](../product-dev/skills/).
 
 ### Templates
 
-Ready-to-use issue templates for the GF_AOS lane/type model.
+Ready-to-use issue templates for the lane/type model.
 
 - [Bug](templates/bug.md)
 - [Feature](templates/feature.md)
