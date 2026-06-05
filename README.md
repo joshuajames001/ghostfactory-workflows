@@ -4,7 +4,7 @@
 
 # GhostFactory Workflows
 
-> Tired of reading? Let your AI read this repo :)
+> <img src="assets/robot-mark.svg" alt="AI agent" width="18" align="top"> Tired of reading? Let your AI read this repo → [`README_AI.md`](README_AI.md)
 
 Workflows, issue models and reusable AI skills for **AI-first product development** — where issues are created by agents (Claude, Linear Agent, …), not humans.
 
