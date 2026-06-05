@@ -18,6 +18,7 @@ Built for solo founders and small teams where the backlog can otherwise grow fas
 ### Setup
 
 - **[Setup — how to configure this in Linear](setup/)** — copy-paste-ready guidance/automation texts mapped to each Linear settings section (workspace AI agents, team workflow/triage).
+- `setup/mcp-workspace-setup.md` — one-shot MCP prompt to provision labels + guidance doc
 
 ### Policy
 

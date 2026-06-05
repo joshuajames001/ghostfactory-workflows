@@ -4,6 +4,19 @@ This file is the fast path. Read this first. Only go deeper if you need specific
 
 ---
 
+## Quick Setup via MCP
+
+Have Claude (or any MCP-connected agent) run this before creating any issues:
+
+→ [`linear-workflow/setup/mcp-workspace-setup.md`](linear-workflow/setup/mcp-workspace-setup.md)
+
+What it does: syncs the full label schema, creates the AI Agent Guidance
+document in your team, and verifies Triage routing — in one pass.
+
+Replace `<TEAM>` with your team name before running.
+
+---
+
 ## The model
 
 Every issue has exactly **1 Lane** and **1 Type**.

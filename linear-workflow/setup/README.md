@@ -9,6 +9,10 @@ This folder mirrors the actual settings in Linear. Each file = one field that yo
 | [`team-workflow-triage/agent-automation.md`](team-workflow-triage/agent-automation.md) | `team-settings/workflow/triage` → agent automations |
 | [`team-workflow-triage/triage-intelligence.template.md`](team-workflow-triage/triage-intelligence.template.md) | `team-settings/workflow/triage` → triage intelligence (extra guidance) |
 
+Run once via MCP (not a paste-into-settings file):
+
+- `mcp-workspace-setup.md` — one-shot MCP prompt: label schema + AI Agent Guidance doc + Triage verification
+
 Skills in [`../skills/`](../skills/) are registered in the **Skills** section of `agent personalization` (below guidance). Issue templates are in [`../templates/`](../templates/) and the canonical policy in [`../policy/`](../policy/).
 
 ## Placeholder conventions
