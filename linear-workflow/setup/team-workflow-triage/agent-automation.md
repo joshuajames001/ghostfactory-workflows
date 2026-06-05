@@ -13,6 +13,7 @@ When any issue enters triage
   - `Type Discovery`
   - `Type Follow-up`
   - `Type Tech Debt`
+  - `Type Chore`
 - add exactly one Lane label:
   - `Lane Later`
   - `Lane Discovery`

@@ -13,7 +13,7 @@ When converting informal input into an issue for GF_AOS, always treat the team d
 Convert informal input into a quality issue that is classified right away into the correct GF_AOS workflow model.
 
 ## Procedure
-1. Decide whether it is a Bug, Feature, Discovery, Follow-up, or Tech Debt.
+1. Decide whether it is a Bug, Feature, Discovery, Follow-up, Tech Debt, or Chore.
 2. Pick the matching template.
 3. Propose a short, specific title.
 4. Write the issue in the structure matching the template.

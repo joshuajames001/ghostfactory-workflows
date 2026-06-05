@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 134" role="img" aria-label="Lane and Type labels">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 134" role="img" aria-label="Lane and Type labels">
   <style>
     .chip { font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 13px; font-weight: 600; fill: #fff; }
     .gut  { font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; font-weight: 700; fill: #888; }
@@ -21,5 +21,6 @@
     <rect x="310" y="84" width="140" height="30" rx="6" fill="#7C3AED"/><text class="chip" x="380" y="104" text-anchor="middle">Type Discovery</text>
     <rect x="462" y="84" width="140" height="30" rx="6" fill="#D97706"/><text class="chip" x="532" y="104" text-anchor="middle">Type Follow-up</text>
     <rect x="614" y="84" width="140" height="30" rx="6" fill="#6B7280"/><text class="chip" x="684" y="104" text-anchor="middle">Type Tech Debt</text>
+    <rect x="766" y="84" width="108" height="30" rx="6" fill="#9CA3AF"/><text class="chip" x="820" y="104" text-anchor="middle">Type Chore</text>
   </g>
 </svg>

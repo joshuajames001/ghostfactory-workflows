@@ -23,12 +23,18 @@ Use when: it's not primarily about a new capability, and the goal is cleanup / r
 Maps to: `Type Tech Debt` · `Lane Ready` (concrete) or `Lane Later`.
 Caution: if the issue contains open questions before implementation → it's not Tech Debt, but Discovery.
 
+## 6. Chore
+Use when: routine maintenance, dependency bumps, configuration, tooling/CI, or setup/ops work with no direct user value and no code-quality change.
+Maps to: `Type Chore` · `Lane Later` (usually) or `Lane Ready` (if needed soon).
+Boundary: improves existing code quality → Tech Debt; pure upkeep with no user value → Chore; open question first → Discovery.
+
 ## Quick decision rule
 - broken behavior → **Bug**
 - new capability → **Feature**
 - not enough clarity / need decision / audit before action → **Discovery**
 - came from previous issue/review → **Follow-up**
 - cleanup / refactor / hardening without open decision → **Tech Debt**
+- routine upkeep / deps / config / CI without code-quality change → **Chore**
 
 ## Priority & Triage reminder
 - `Lane Now` never automatically; priority conservatively; active work and cycle are chosen by a human

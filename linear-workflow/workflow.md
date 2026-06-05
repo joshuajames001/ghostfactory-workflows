@@ -113,6 +113,7 @@ Use only:
 - `Type Discovery`
 - `Type Follow-up`
 - `Type Tech Debt`
+- `Type Chore`
 
 ### Type meaning
 
@@ -130,6 +131,9 @@ Use only:
 
 - `Type Tech Debt`
   - refactor, cleanup, infra hardening, maintainability
+
+- `Type Chore`
+  - routine maintenance, dependency bumps, config, tooling/CI, setup/ops; no user value and no code-quality change
 
 ### Forbidden labels
 
@@ -351,6 +355,26 @@ Structure:
 
 ---
 
+### 6. Chore
+Use when:
+
+- it's routine maintenance, a dependency bump, configuration, tooling/CI, or setup/ops
+- there is no direct user value and no code-quality change (that would be Tech Debt)
+
+Structure:
+
+```md
+## Task
+
+## Done When
+- [ ]
+- [ ]
+
+## Note
+```
+
+---
+
 ## Template selection rules
 
 Use this simple mapping:
@@ -360,6 +384,7 @@ Use this simple mapping:
 - not enough clarity / audit / need decision → **Discovery**
 - came from previous issue or review → **Follow-up**
 - cleanup / refactor / hardening without open decision → **Tech Debt**
+- routine upkeep / deps / config / CI without code-quality change → **Chore**
 
 ---
 
@@ -458,6 +483,7 @@ Introduce issue templates:
 - Discovery
 - Follow-up
 - Tech Debt
+- Chore
 
 ### Phase 4 — Claude / agent skill
 

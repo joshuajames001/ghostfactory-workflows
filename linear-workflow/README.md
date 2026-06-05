@@ -46,6 +46,7 @@ Ready-to-use issue templates for the lane/type model.
 - [Discovery](templates/discovery.md)
 - [Follow-up](templates/follow-up.md)
 - [Tech Debt](templates/tech-debt.md)
+- [Chore](templates/chore.md)
 
 ---
 
@@ -80,6 +81,7 @@ Human decides on active work.
 | Discovery | Open question, audit, arch decision |
 | Follow-up | Comes from review or completed issue |
 | Tech Debt | Cleanup, refactor, hardening — no open question |
+| Chore | Routine upkeep — deps, config, tooling, setup; no user value |
 
 **Critical rule:** If an issue has an open question or requires a decision before implementation → `Type Discovery`. Even if it looks like Tech Debt.
 

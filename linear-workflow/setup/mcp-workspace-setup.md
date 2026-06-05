@@ -167,7 +167,8 @@ save_document(
 | New capability or user value | Type Feature → feature template |
 | Needs research or a decision | Type Discovery → discovery template |
 | Follows from previous work | Type Follow-up → follow-up template |
-| Cleanup or maintenance | Type Tech Debt or Type Chore → tech-debt template |
+| Cleanup, refactor, hardening (code quality) | Type Tech Debt → tech-debt template |
+| Routine maintenance, deps, config, setup (no user value) | Type Chore → chore template |
 
 Templates: `ghostfactory-workflows/linear-workflow/templates/`
 
@@ -265,7 +266,7 @@ Created: X / Skipped: Y / Total: Z
 
 2. Issue Templates → add templates from:
    ghostfactory-workflows/linear-workflow/templates/
-   (bug.md, feature.md, discovery.md, follow-up.md, tech-debt.md)
+   (bug.md, feature.md, discovery.md, follow-up.md, tech-debt.md, chore.md)
 
 3. Team Settings → Triage → Linear Agent Instructions → paste content from:
    ghostfactory-workflows/linear-workflow/setup/workspace-ai-agents/linear-agent-guidance.md

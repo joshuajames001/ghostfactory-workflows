@@ -108,11 +108,13 @@ Use **only these** — no others:
 | `Type Discovery` | Research, epic, architecture decision, open question |
 | `Type Follow-up` | Follows up on a review, retro, or a previous issue |
 | `Type Tech Debt` | Refactor, cleanup, infra hardening, maintainability |
+| `Type Chore` | Routine maintenance, dependency bumps, config, tooling/CI, setup/ops — no user value, no code-quality change |
 
 **Type rules:**
 - If an issue contains open questions, an audit, or a decision required before implementation → `Type Discovery`, even if it technically relates to cleanup or hardening
 - Unsure between `Type Feature` and `Type Tech Debt` → ask whether it's a new capability or just an implementation improvement
 - Unsure between `Type Tech Debt` and `Type Discovery` with open questions → `Type Discovery`
+- `Type Tech Debt` vs `Type Chore` → improves existing code quality = Tech Debt; pure upkeep with no user value (deps, config, CI, setup) = Chore
 
 ---
 
@@ -224,6 +226,18 @@ Use **only these** — no others:
 [risks, dependencies, context]
 ```
 
+### Chore
+```
+## Task
+[what needs doing]
+
+## Done When
+[concrete completion condition]
+
+## Note
+[risks, dependencies, context]
+```
+
 ---
 
 ## Issue anatomy (summary)
@@ -234,7 +248,7 @@ Title:       [verb + object], max 60 chars
              ❌ "PDF problem" / "Fix things in PDF"
 
 Lane label:  Lane Now | Lane Ready | Lane Discovery | Lane Later
-Type label:  Type Bug | Type Feature | Type Discovery | Type Follow-up | Type Tech Debt
+Type label:  Type Bug | Type Feature | Type Discovery | Type Follow-up | Type Tech Debt | Type Chore
 Priority:    conservative — Urgent only for security/data loss/hard blocker
 Description: use the template matching the chosen Type
 ```
@@ -243,7 +257,7 @@ Description: use the template matching the chosen Type
 
 ## What the agent does when creating an issue
 
-1. Picks the right **template** for the situation (Bug / Feature / Discovery / Follow-up / Tech Debt)
+1. Picks the right **template** for the situation (Bug / Feature / Discovery / Follow-up / Tech Debt / Chore)
 2. Proposes a **title** (max 60 chars, verb + object)
 3. Fills the **description** per the template structure
 4. Sets exactly **1 Type label** + exactly **1 Lane label**
@@ -276,7 +290,7 @@ an integration), but explicit state prevents ambiguity.
 
 ## Session review rules
 
-- For each review point, decide: Bug / Feature / Discovery / Follow-up / Tech Debt
+- For each review point, decide: Bug / Feature / Discovery / Follow-up / Tech Debt / Chore
 - Create an issue only for **genuinely separate work**
 - Unsure `Lane Ready` vs `Lane Discovery` → choose **`Lane Discovery`**
 - Unsure `Type Feature` vs `Type Tech Debt` → weigh new capability vs implementation improvement

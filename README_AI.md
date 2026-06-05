@@ -35,6 +35,7 @@ Every issue has exactly **1 Lane** and **1 Type**.
 | `Type Discovery` | Open question, audit, arch decision — **even if it looks like Tech Debt** |
 | `Type Follow-up` | Comes from a review or completed issue |
 | `Type Tech Debt` | Cleanup / refactor / hardening — **no open question** |
+| `Type Chore` | Routine upkeep — deps / config / tooling / setup; **no user value, no code-quality change** |
 
 **Triage routing:**
 - `Lane Ready` and `Lane Discovery` → Triage checkpoint
@@ -88,3 +89,4 @@ Every issue has exactly **1 Lane** and **1 Type**.
 - Unclear / decision needed / audit → `discovery.md`
 - Follows a review or completed issue → `follow-up.md`
 - Cleanup / refactor / hardening, no open question → `tech-debt.md`
+- Routine upkeep / deps / config / tooling, no user value → `chore.md`

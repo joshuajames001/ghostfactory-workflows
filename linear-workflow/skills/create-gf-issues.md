@@ -16,6 +16,7 @@ Before creating an issue, first pick the correct issue template:
 - Discovery — unclear scope, a question, an epic, an architectural decision
 - Follow-up — work arising from a review or following on from a completed issue
 - Tech Debt — refactor, cleanup, hardening, maintainability
+- Chore — routine maintenance, dependency bumps, config, tooling, setup (no user value)
 
 Create the issue correctly from the start; do not rely on Triage. Issues from Claude usually do not enter team Triage, so the lane and type must already be set at creation time.
 
@@ -37,6 +38,7 @@ Use only these type labels:
 - `Type Discovery`
 - `Type Follow-up`
 - `Type Tech Debt`
+- `Type Chore`
 
 Never use:
 - `triage:*`
@@ -54,6 +56,7 @@ Rules for the type:
 - research / epic / architectural decision / open question → `Type Discovery`
 - follows on from a review, retrospective, or previous issue → `Type Follow-up`
 - refactor / cleanup / infra hardening / maintainability → `Type Tech Debt`
+- routine maintenance / dependency bumps / config / tooling / setup with no user value and no code-quality change → `Type Chore`
 - if the issue contains open questions, an audit, or a decision that must be made before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening
 
 Priority:
@@ -100,8 +103,13 @@ For a Tech Debt, use the sections:
 - Done When
 - Note
 
+For a Chore, use the sections:
+- Task
+- Done When
+- Note
+
 During session review:
-- for each point, first decide whether it is a Bug, Feature, Discovery, Follow-up, or Tech Debt
+- for each point, first decide whether it is a Bug, Feature, Discovery, Follow-up, Tech Debt, or Chore
 - create an issue only when it is genuinely standalone work
 - if you are unsure between `Lane Ready` and `Lane Discovery`, choose `Lane Discovery`
 - if you are unsure between `Type Feature` and `Type Tech Debt`, consider whether it is a new capability or just an implementation improvement

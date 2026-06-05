@@ -40,6 +40,7 @@ Every issue carries exactly **one Lane** (when/how) and **one Type** (what kind 
 | `Type Discovery` | Open question, audit, architecture decision |
 | `Type Follow-up` | Comes from a review or completed issue |
 | `Type Tech Debt` | Cleanup, refactor, hardening — no open question |
+| `Type Chore` | Routine upkeep — deps, config, tooling, setup; no user value |
 
 **Critical rule:** if an issue has an open question or needs a decision before implementation → `Type Discovery`, even if it looks like Tech Debt.
 
@@ -71,7 +72,7 @@ ghostfactory-workflows/
 │   ├── setup/                    copy-paste configs mapped to Linear settings
 │   ├── policy/                   issue policy, automation spec, template selection, label schema
 │   ├── skills/                   7 AI skills for issue creation / triage / hygiene
-│   ├── templates/                5 issue templates (Bug · Feature · Discovery · Follow-up · Tech Debt)
+│   ├── templates/                6 issue templates (Bug · Feature · Discovery · Follow-up · Tech Debt · Chore)
 │   └── claude-skill/             bonus: installable Claude Code skill bundling the whole workflow
 └── product-dev/              🧩 general AI skills (tracker-agnostic)
     └── skills/                   6 skills: PRD→issue tree, impl spec, release notes, reporting

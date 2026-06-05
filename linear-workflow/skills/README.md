@@ -4,7 +4,7 @@ Reusable **skills** for your Linear agent, working under the GF_AOS issue model.
 
 Each skill is a single, self-contained task. They all assume:
 - `Lane Now / Ready / Discovery / Later`
-- `Type Bug / Feature / Discovery / Follow-up / Tech Debt`
+- `Type Bug / Feature / Discovery / Follow-up / Tech Debt / Chore`
 - the ban on `triage:*` and the old `ready`
 - the hybrid model: `Lane Ready` and `Lane Discovery` → Triage review, `Lane Later` → straight to the backlog
 

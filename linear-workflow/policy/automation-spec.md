@@ -40,6 +40,9 @@ Run on create / update / import. Remove: `triage:now/ready/discovery/later`, the
 
 Constraints: max 3; a domain label does not replace a type or a lane.
 
+## Status labels (situational)
+Optional `blocked` / `needs refinement`. An automation may add or remove them when the situation clearly applies; they are supplementary and never substitute for a `Lane *` or `Type *`.
+
 ## Human-only decisions
 `Lane Now` · cycle assignment · final priority override · accepting `Lane Ready`/`Lane Discovery` from Triage into the backlog · merging/closing an issue.
 

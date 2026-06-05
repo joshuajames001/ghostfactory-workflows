@@ -22,7 +22,7 @@ Every issue must have:
 
 Use only:
 - `Lane Now`, `Lane Ready`, `Lane Discovery`, `Lane Later`
-- `Type Bug`, `Type Feature`, `Type Discovery`, `Type Follow-up`, `Type Tech Debt`
+- `Type Bug`, `Type Feature`, `Type Discovery`, `Type Follow-up`, `Type Tech Debt`, `Type Chore`
 
 Never use:
 - `triage:*`
@@ -45,6 +45,7 @@ Never use:
 - research / epic / architectural decision / audit / open question → `Type Discovery`
 - follows on from a review or an earlier issue → `Type Follow-up`
 - refactor / cleanup / infra hardening / maintainability → `Type Tech Debt`
+- routine maintenance / dependency bumps / config / tooling / setup with no user value and no code-quality change → `Type Chore`
 - if the issue contains open questions, an audit, or a decision before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening
 
 ## Lane rules

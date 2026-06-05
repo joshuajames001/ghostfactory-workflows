@@ -29,13 +29,15 @@ Every issue must have:
 - `Type Discovery`
 - `Type Follow-up`
 - `Type Tech Debt`
+- `Type Chore`
 
 ### Type rules
 - broken behavior / regression / wrong behavior → `Type Bug`
 - new capability / delivery item → `Type Feature`
 - research / epic / architecture decision / audit / open question → `Type Discovery`
 - work that follows a previous issue or review → `Type Follow-up`
-- refactor / cleanup / hardening / maintenance → `Type Tech Debt`
+- refactor / cleanup / hardening / maintainability → `Type Tech Debt`
+- routine maintenance / dependency bumps / config / tooling / setup → `Type Chore` (no user value, no code-quality change)
 - If an issue contains open questions, audit work, or a decision that must happen before implementation, use `Type Discovery` even if it technically relates to cleanup or hardening.
 
 ## Forbidden labels
