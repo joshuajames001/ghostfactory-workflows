@@ -4,7 +4,7 @@
 
 # GhostFactory Workflows
 
-> TL;DR for humans, full context for agents — start at [`README_AI.md`](README_AI.md).
+> Tired of reading? Let your AI read this repo :)
 
 Workflows, issue models and reusable AI skills for **AI-first product development** — where issues are created by agents (Claude, Linear Agent, …), not humans.
 
