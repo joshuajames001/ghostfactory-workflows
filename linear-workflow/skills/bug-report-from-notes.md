@@ -1,16 +1,16 @@
 ---
 name: Bug report from notes
-description: Converts informal bug notes into a quality issue in the GF_AOS workflow
+description: Converts informal bug notes into a quality issue in the `<TEAM>` workflow
 scope: linear-workflow
 ---
 
-When converting notes into a bug issue for GF_AOS, always treat the team docs as the source of truth:
+When converting notes into a bug issue for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Short Agent Guidance
 - Template Selection Rules
 
 ## Goal
-Convert informal bug notes into a quality issue in the correct GF_AOS workflow model.
+Convert informal bug notes into a quality issue in the correct `<TEAM>` workflow model.
 
 ## Always use the `Bug` template.
 

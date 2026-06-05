@@ -1,16 +1,16 @@
 ---
 name: Backlog grooming
-description: Ensures an issue is correctly classified in the GF_AOS model and improves its readiness for execution
+description: Ensures an issue is correctly classified in the `<TEAM>` model and improves its readiness for execution
 scope: linear-workflow
 ---
 
-When grooming the backlog for GF_AOS, always treat the team docs as the source of truth:
+When grooming the backlog for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance
 
 ## Goal
-Raise backlog quality and verify that the issue is correctly classified under the new GF_AOS model.
+Raise backlog quality and verify that the issue is correctly classified under the new `<TEAM>` model.
 
 ## Procedure
 1. Check that the issue has exactly 1 `Lane *` and 1 `Type *`.

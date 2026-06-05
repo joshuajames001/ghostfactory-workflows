@@ -1,10 +1,10 @@
 ---
 name: Prioritize backlog item
-description: Recommends a conservative priority for a GF_AOS backlog item based on impact, urgency, and the lane/type rules
+description: Recommends a conservative priority for a `<TEAM>` backlog item based on impact, urgency, and the lane/type rules
 scope: linear-workflow
 ---
 
-When prioritizing a backlog item for GF_AOS, always treat the team docs as the source of truth:
+When prioritizing a backlog item for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance

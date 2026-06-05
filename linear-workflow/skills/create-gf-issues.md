@@ -1,10 +1,10 @@
 ---
 name: Create GF issues
-description: Create correctly labeled issues for GF_AOS with appropriate templates and conservative priority
+description: Create correctly labeled issues for `<TEAM>` with appropriate templates and conservative priority
 scope: linear-workflow
 ---
 
-When creating an issue for GF_AOS, always treat the team docs as the source of truth:
+When creating an issue for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance

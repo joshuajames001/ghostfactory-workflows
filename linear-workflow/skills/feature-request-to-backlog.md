@@ -1,16 +1,16 @@
 ---
 name: Feature request to backlog
-description: Convert an idea into a structured GF_AOS backlog issue with the right template and priority
+description: Convert an idea into a structured `<TEAM>` backlog issue with the right template and priority
 scope: linear-workflow
 ---
 
-When converting an idea into a backlog issue for GF_AOS, always treat the team docs as the source of truth:
+When converting an idea into a backlog issue for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Short Agent Guidance
 - Template Selection Rules
 
 ## Goal
-Convert an idea into a structured issue suitable for backlog refinement and classify it correctly in the GF_AOS workflow.
+Convert an idea into a structured issue suitable for backlog refinement and classify it correctly in the `<TEAM>` workflow.
 
 ## Procedure
 1. Decide whether the `Feature` or `Discovery` template is more appropriate.

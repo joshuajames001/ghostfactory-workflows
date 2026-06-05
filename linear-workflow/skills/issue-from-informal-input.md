@@ -1,16 +1,16 @@
 ---
 name: Issue from informal input
-description: Converts informal input into a correctly routed issue in the GF_AOS workflow model
+description: Converts informal input into a correctly routed issue in the `<TEAM>` workflow model
 scope: linear-workflow
 ---
 
-When converting informal input into an issue for GF_AOS, always treat the team docs as the source of truth:
+When converting informal input into an issue for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Short Agent Guidance
 - Template Selection Rules
 
 ## Goal
-Convert informal input into a quality issue that is classified right away into the correct GF_AOS workflow model.
+Convert informal input into a quality issue that is classified right away into the correct `<TEAM>` workflow model.
 
 ## Procedure
 1. Decide whether it is a Bug, Feature, Discovery, Follow-up, Tech Debt, or Chore.

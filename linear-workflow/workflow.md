@@ -68,7 +68,7 @@ That's why you need a dual model:
 
 ---
 
-## Final issue schema for the GF_AOS team
+## Final issue schema for the `<TEAM>` team
 
 Every issue should have:
 

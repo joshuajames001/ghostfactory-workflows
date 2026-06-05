@@ -4,14 +4,14 @@ description: Assigns each issue a single Lane and Type, recommends the next step
 scope: linear-workflow
 ---
 
-When triaging an issue for GF_AOS, always treat the team docs as the source of truth:
+When triaging an issue for `<TEAM>`, always treat the team docs as the source of truth:
 - Final Issue Policy
 - Automation Spec
 - Short Agent Guidance
 - Template Selection Rules
 
 ## Goal
-Produce a quick, usable triage decision without breaking the GF_AOS workflow model.
+Produce a quick, usable triage decision without breaking the `<TEAM>` workflow model.
 
 ## Mandatory model
 Every issue must have:
