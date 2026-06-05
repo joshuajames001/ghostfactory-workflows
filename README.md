@@ -63,10 +63,11 @@ flowchart LR
 
 ```
 ghostfactory-workflows/
+├── README_AI.md          — quick reference for AI agents
 ├── linear-workflow/          🎯 the Linear setup (start here)
 │   ├── workflow.md               full guide: model, Triage, hybrid model, rollout
 │   ├── setup/                    copy-paste configs mapped to Linear settings
-│   ├── policy/                   canonical rules the skills reference
+│   ├── policy/                   issue policy, automation spec, template selection, label schema
 │   ├── skills/                   7 AI skills for issue creation / triage / hygiene
 │   ├── templates/                5 issue templates (Bug · Feature · Discovery · Follow-up · Tech Debt)
 │   └── claude-skill/             bonus: installable Claude Code skill bundling the whole workflow

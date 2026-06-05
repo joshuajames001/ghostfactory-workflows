@@ -22,6 +22,7 @@ Built for solo founders and small teams where the backlog can otherwise grow fas
 ### Policy
 
 - **[Policy](policy/)** — canonical source of truth the skills reference: Final Issue Policy, Automation Spec, Template Selection Rules.
+- `policy/label-schema.md` — label naming conventions, domain categories, usage rules
 
 ### Skills
 

@@ -34,6 +34,7 @@ When creating an issue, always follow:
 - **[Automation Spec](../policy/automation-spec.md)**
 - **[Short Agent Guidance](../setup/workspace-ai-agents/linear-agent-guidance.md)**
 - **[Template Selection Rules](../policy/template-selection-rules.md)**
+- Label Schema — `linear-workflow/policy/label-schema.md`
 
 ---
 
@@ -251,6 +252,25 @@ Description: use the template matching the chosen Type
 7. **Never** adds an issue to a cycle without an explicit instruction
 8. If the issue has enough information → creates it directly, no questions
 9. If there isn't enough information → sets `Lane Discovery`, doesn't block with dialog
+
+---
+
+## Routing an issue to Triage
+
+Always set `state: "Triage"` explicitly in every `save_issue` call.
+Issues created via MCP may route to Triage automatically (MCP counts as
+an integration), but explicit state prevents ambiguity.
+
+**Three ways to land in Triage:**
+
+| Method | Notes |
+|---|---|
+| `state: "Triage"` in `save_issue` | Explicit — always works. Preferred for MCP. |
+| Create issue from within Triage view | Manual UI only |
+| Created via integration (Slack, Sentry, MCP) | Automatic |
+
+> ⚠️ Never rely on "no project assigned" to trigger Triage — project assignment
+> has no effect on Triage routing.
 
 ---
 
