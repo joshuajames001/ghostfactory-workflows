@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 6 132 82" role="img" aria-label="GhostFactory — ghost and robot duo">
+  <defs>
+    <mask id="duo-ghost">
+      <rect width="80" height="80" fill="#fff"/>
+      <rect x="27.5" y="30" width="5" height="12" rx="2.5" fill="#000"/>
+      <rect x="47.5" y="30" width="5" height="12" rx="2.5" fill="#000"/>
+    </mask>
+    <mask id="duo-robot">
+      <rect width="80" height="80" fill="#fff"/>
+      <rect x="27" y="31" width="6" height="11" rx="3" fill="#000"/>
+      <rect x="47" y="31" width="6" height="11" rx="3" fill="#000"/>
+    </mask>
+  </defs>
+
+  <!-- Ghost (brand mark) -->
+  <svg x="0" y="0" width="96" height="96" viewBox="0 0 80 80" overflow="visible">
+    <path d="M 12 70 L 12 37 A 28 28 0 0 1 68 37 L 68 70 L 61 64 L 54 70 L 47 64 L 40 70 L 33 64 L 26 70 L 19 64 L 12 70 Z" fill="#ff4535" mask="url(#duo-ghost)"/>
+  </svg>
+
+  <!-- Robot (its buddy) — ~76%, sharing the baseline -->
+  <svg x="76.7" y="23.8" width="73" height="73" viewBox="0 0 80 80" overflow="visible">
+    <g fill="#ff4535">
+      <circle cx="40" cy="4.5" r="3"/>
+      <rect x="38.5" y="6" width="3" height="9" rx="1.5"/>
+      <path d="M 13 26 Q 13 14 25 14 L 55 14 Q 67 14 67 26 L 67 66 L 60.5 60 L 54 66 L 47 60 L 40.5 66 L 34 60 L 27 66 L 20 60 L 13 66 Z" mask="url(#duo-robot)"/>
+    </g>
+  </svg>
+</svg>
