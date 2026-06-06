@@ -1,3 +1,5 @@
+<img src="assets/duo-mark.svg" alt="GhostFactory — ghost and robot" width="124" align="right">
+
 # README_AI.md — Quick Reference for AI Agents
 
 This file is the fast path. Read this first. Only go deeper if you need specifics.
